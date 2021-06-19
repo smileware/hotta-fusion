@@ -459,9 +459,10 @@
         border-bottom: none;
         .close {
             color: $white;
-            font-size: 30px;
+            font-size: 45px;
             text-shadow: none;
             opacity: 1;
+            padding: 0;
         }
     }
     .search-form {
