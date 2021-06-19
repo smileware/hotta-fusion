@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOTTA Fusion</title>
+
+    <link rel="shortcut icon" href="ico/favicon.png">
+    <link href="css/vendor.css" rel="stylesheet">
+    <link href="css/style-custom.css" rel="stylesheet">
+</head>
+
+<body class="home">
+  <!-- Start:: Navbar -->
+  <header id="masthead" class="site-header">
+      <div class="navbar navbar-expand-lg p-0">
+        <div class="container-fluid">
+            <!-- Start:: Desktop Menu -->
+            <div id="site-nav-d" class="site-nav-d _desktop w-100">
+                <div class="row">
+                    <div class="col-7 text-right">
+                        <div class="menu-toggle"  onclick="openFullScreenNav()">
+                            <b></b>
+                        </div> 
+                        <a href="index.html">
+                            <img src="./img/Logo.png" class="navbar-brand" alt="Hotta Fusion Logo" />
+                        </a>
+                    </div>
+                    <div class="col-5 d-flex justify-content-end align-items-center">
+                        <div class="social -icon-white mx-2">
+                            <a href="#" class="social-item">
+                                <img src="./img/icon-facebook.svg" alt="icon facebook" />
+                            </a>
+                            <a href="#" class="social-item">
+                                <img src="./img/icon-instagram.svg" alt="icon facebook" />
+                            </a>
+                            <a href="#" class="social-item">
+                                <img src="./img/icon-youtube.svg" alt="icon facebook" />
+                            </a>
+                            <a href="#" class="social-item">
+                                <img src="./img/icon-line.svg" alt="icon facebook" />
+                            </a>
+                            <a href="#" class="social-item">
+                                <img src="./img/icon-twitter.svg" alt="icon facebook" />
+                            </a>
+                        </div>
+                        <div class="hotta-dropdown dropdown mx-2">
+                            <a class="btn btn-outline dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                TH
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item" href="#">TH</a>
+                                <a class="dropdown-item" href="#">EN</a>
+                            </div>
+                        </div>
+                        <div class="hotta-dropdown dropdown mx-2">
+                            <a class="btn btn-outline dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="bi bi-cart3 mr-2"></i>
+                                ONLINE SHOP
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item" href="#">LAZADA</a>
+                                <a class="dropdown-item" href="#">SHOPEE</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Fullscreen Nav  -->
+            <div id="fullScreenNav" class="fullscreen-nav">
+                <div class="side-bg" id="sideBgNav"></div>
+                <a href="javascript:void(0)" class="btn-close" onclick="closeFullScreenNav()">&times;</a>
+                <div class="fullscreen-nav--menu">
+                    <form role="search" method="get" class="search-form" action="#">
+                        <div class="input-group input-group-custom mb-3">
+                          <input type="text" class="form-control" placeholder="ค้นหา">
+                          <div class="input-group-append">
+                            <span class="input-group-text">
+                                <i class="bi bi-search"></i>
+                            </span>
+                          </div>
+                        </div>
+                    </form>
+                    <div class="row">
+                        <div class="col-6">
+                            <ul class="nav-menu">
+                                <li class="nav-item ">
+                                    <a class="nav-link" href="index.html">
+                                        <img src="./img/menu-icon-iam.svg" alt="" class="icon">
+                                      I am fusion
+                                    </a>
+                                </li>
+                                <li class="nav-item ">
+                                    <a class="nav-link" href="index.html">
+                                    <img src="./img/menu-icon-drink.svg" alt="" class="icon">
+                                      Fusion Drink
+                                    </a>
+                                </li>
+                                <li class="nav-item ">
+                                    <a class="nav-link" href="index.html">
+                                        <img src="./img/menu-icon-find.svg" alt="" class="icon">
+                                      Find Fusion
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul class="nav-menu">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <img src="./img/menu-icon-trend.svg" alt="" class="icon">
+                                        FUSION TREND
+                                    </a>
+                                </li>
+                                <li class="nav-item  nav-item-has-children">
+                                    
+                                    <a class="nav-link" href="#">
+                                        <img src="./img/menu-icon-news.svg" alt="" class="icon">
+                                        FUSION NEWS
+                                    </a>
+                                    <ul class="sub-menu">
+                                        <li class="nav-item">
+                                            <a href="#" class="menu-item">VIDEO</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="menu-item">NEWS</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="menu-item">ACTIVITY</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item  nav-item-has-children">
+                                    
+                                    <a class="nav-link" href="#">
+                                        <img src="./img/menu-icon-contact.svg" alt="" class="icon">
+                                        CONTACT FUSION
+                                    </a>
+                                    <ul class="sub-menu">
+                                        <li class="nav-item">
+                                            <a href="#" class="menu-item">CONTACT FORM</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="menu-item">FAQS</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End:: Desktop Menu -->
+
+            <div class="navbar-m _mobile">
+                <a class="search-modal-trigger"  data-toggle="modal" data-target="#siteSearch" onclick="return false;">
+                    <i class="bi bi-search"></i>
+                </a>
+                <a class="navbar-brand" href="index.html">
+                  <img src="./img/Logo.png" alt="Hotta Fusion Logo" width="100px"/>
+                </a>
+                <div class="site-toggle">
+                    <b></b>
+                </div>
+            </div>
+          <!-- Start:: Mobile Menu -->
+          <div id="site-nav-m" class="site-nav-m _mobile">
+            <ul class="navbar-nav menu">
+                <li class="nav-item ">
+                    <a class="nav-link" href="#">
+                        <img src="./img/menu-icon-iam.svg" alt="" class="icon">
+                        I am Fusion
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="#">
+                        <img src="./img/menu-icon-drink.svg" alt="" class="icon">
+                        Fusion Drink 
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="#">
+                        <img src="./img/menu-icon-find.svg" alt="" class="icon">
+                        Find Fusion
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="#">
+                        <img src="./img/menu-icon-trend.svg" alt="" class="icon">
+                        Fusion Trend
+                    </a>
+                </li>
+                <li class="nav-item nav-item-has-children">
+                    <a class="nav-link" href="#">
+                        <img src="./img/menu-icon-news.svg" alt="" class="icon">
+                        Fusion News
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="nav-item">
+                            <a href="#" class="menu-item">
+                                News1
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="menu-item"> 
+                                News1
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item nav-item-has-children">
+                    <a class="nav-link" href="#">
+                        <img src="./img/menu-icon-contact.svg" alt="" class="icon">
+                        Contact fusion
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="nav-item">
+                            <a href="#" class="menu-item">
+                                Contact 1
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="menu-item"> 
+                                Contact 2
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item nav-item-has-children">
+                    <a class="nav-link" href="#">
+                        <img src="./img/menu-icon-cart.svg" alt="" class="icon">
+                        Online Shop
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="nav-item">
+                            <a href="#" class="menu-item">
+                                Contact 1
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="menu-item"> 
+                                Contact 2
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <div>
+                <div class="language-switcher">
+                    <div class="btn-group" role="group">
+                      <a type="button" class="btn active">TH</a>
+                      <a type="button" class="btn">EN</a>
+                    </div>
+                </div>
+                <div class="social -icon-white mx-2">
+                    <a href="#" class="social-item">
+                        <img src="./img/icon-facebook.svg" alt="icon facebook" />
+                    </a>
+                    <a href="#" class="social-item">
+                        <img src="./img/icon-instagram.svg" alt="icon facebook" />
+                    </a>
+                    <a href="#" class="social-item">
+                        <img src="./img/icon-youtube.svg" alt="icon facebook" />
+                    </a>
+                    <a href="#" class="social-item">
+                        <img src="./img/icon-line.svg" alt="icon facebook" />
+                    </a>
+                    <a href="#" class="social-item">
+                        <img src="./img/icon-twitter.svg" alt="icon facebook" />
+                    </a>
+                </div>
+            </div>
+            
+          </div>
+          <!-- End:: Mobile Menu -->
+        </div>
+      </div>
+  </header>
+  <!-- End:: Navbar -->
+  <div class="site-header-space _mobile"></div>
+  <!-- Start:: Content -->
+  <main>
+    
+  </main>
+  <!-- End:: Content -->
+  <!-- Start:: Footer -->
+  <section class="site-footbar">
+  </section>
+  <!-- <div class="site-footer-space"></div> -->
+  <footer class="site-footer">
+      <div class="footer-info d-flex align-items-center">
+        <div class="info-copyright d-flex align-items-center">
+          <span>©2021 สงวนลิขสิทธิ์ กรุงเทพมหานคร</span>
+        </div>
+        <div class="info-address d-flex align-items-center">
+          <span>สำนักงานประชาสัมพันธ์ สำนักปลัดกรุงเทพมหานคร 173 ถ.ดินสอ แขวงเสาชิงช้า เขตพระนคร กทม. 10200</span>
+        </div>
+      </div>
+  </footer>
+  <!-- End:: Footer -->
+
+  <!-- Start:: Search Modal -->
+  <div class="modal search-modal fade" id="siteSearch" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="siteSearchLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <i class="bi bi-x"></i>
+          </button>
+        </div>
+
+        <div class="modal-body">
+          <form role="search" method="get" class="search-form" action="#">
+            <label for="search">
+              <input type="search" class="search-field" placeholder="ค้นหา บทความ, ข่าวสาร" value="" name="search" />
+            </label>
+            <button type="submit" class="btn btn-primary">
+              <i class="bi bi-search"></i>
+              ค้นหา
+            </button>
+        </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End:: Search Modal -->
+</body>
+
+<!-- Vendor -->
+<script src="js/vendor/jquery.min.js"></script> 
+<script src="js/vendor/popper.min.js"></script> 
+<script src="js/vendor/bootstrap.min.js"></script> 
+<script src="js/vendor/magnific-popup.min.js"></script> 
+<!-- Javascript Custom --> 
+<script src="js/script-custom.js"></script> 
+
+</html>
