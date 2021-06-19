@@ -3,6 +3,11 @@
 function addClass(e,l){var elements=document.querySelectorAll(e);for(var s=0;s<elements.length;s++)elements[s].classList.add(l)}function removeClass(e,l){var elements=document.querySelectorAll(e);for(var s=0;s<elements.length;s++)elements[s].classList.remove(l)}
 
 
+/* ------- Responsive ------- */
+function isMobile() { 
+    return window.matchMedia("only screen and (max-width: 992px)").matches;
+}
+
 function openFullScreenNav() {
   document.getElementById("fullScreenNav").style.width = "60%";
   document.getElementById("sideBgNav").style.width = "110px";
@@ -26,7 +31,6 @@ document.addEventListener(
             }
         }
         if (event.target.matches("#site-nav-m .nav-item-has-children > svg")) {
-            console.log('click');
             if (event.target.parentNode.classList.contains("active")) {
                 event.target.parentNode.classList.remove("active");
             } else {
@@ -53,13 +57,20 @@ $(window).on('load', function() {
 });
 
 /*------- Banner ------*/
-
-var elms = document.getElementsByClassName( 'swiper' );
-for ( var i = 0, len = elms.length; i < len; i++ ) {
-	new Swiper( elms[ i ] , {
+// Desktop
+var homepageBanner = new Swiper( ".swiper-homepage" , {
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    }
+});
+// Mobile
+if(isMobile()) { 
+    var iamMobileCarousel = new Swiper( ".swiper-iam-mobile" , {
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
         }
     });
 }
+

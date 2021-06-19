@@ -24,18 +24,23 @@ h6 {
 }
 h1 {
     font-size: $font-size-h1;
+    font-weight: bold;
 }
 h2 {
     font-size: $font-size-h2;
+    font-weight: bold;
 }
 h3 {
     font-size: $font-size-h3-m;
+    font-weight: bold;
 }
 h4 {
     font-size: $font-size-h4;
+    font-weight: bold;
 }
 h5 {
     font-size: $font-size-h5;
+    font-weight: bold;
 }
 h6 {
     font-size: $font-size-h6;
@@ -71,6 +76,7 @@ span{
 .text-danger { color : $danger !important }
 .text-info { color : $info !important }
 .text-black { color: $black }
+.text-grey { color: $grey }
 .bg-primary-0 {background-color: $primary-0; transition: $transition;}
 .bg-primary-1 {background-color: $primary-1; transition: $transition;}
 .bg-primary-2 {background-color: $primary-2; transition: $transition;}
@@ -132,6 +138,11 @@ span{
 .container{
     max-width: 100%;
     padding: 0 $space-m;
+}
+.container-fluid { 
+    &.px-30 { 
+        padding: 0 $space-m;
+    }
 }
 .container-lg { 
     max-width: $size-lg;
@@ -252,6 +263,26 @@ span{
     }
     .modal-body { 
         height: 100vh;
+        padding: 0;
+    }
+}
+.modal-video { 
+    background-color: #FFAC40;
+    .modal-content { 
+        background-color: transparent;
+        border: none;
+    }
+    .modal-header { 
+        border-bottom: none;
+        padding: 0;
+        .close { 
+            color: $white;
+            font-size: 30px;
+            text-shadow: none;
+            opacity: 1;
+        }
+    }
+    .modal-body { 
         padding: 0;
     }
 }
@@ -436,39 +467,39 @@ textarea {
   box-shadow: 0 0 0 0.2rem rgba(255, 143, 28, 0.25);
 }
 .btn-primary  {
-    background-color: $primary-1;
+    background-color: $primary-2;
     border: none;
-    border-radius: 50px;
-    font-size: 16px;
-    font-weight: 300;
-    height: 45px;
+    border-radius: 0px;
+    font-size: 25px;
+    font-weight: bold;
+    height: 47px;
     text-align: center;
     width: 100%;
     transition: $transition;
     &:hover { 
-        background-color: $primary-1-hover; 
+        background-color:  $primary-2-hover;
     }
 }
 .btn-primary:hover:active:focus,.btn-outline-primary:hover:active:focus { 
-    background-color: $primary-1-hover; 
+    background-color: $primary-2-hover; 
     box-shadow: 0 0 0 0.2rem rgba(255, 143, 28, 0.25);
 }
 .btn-primary:focus, .btn-primary.focus,.btn-outline-primary:focus, .btn-outline-primary.focus {
     color: #fff;
-    background-color: $primary-1-hover; ;
-    border-color: $primary-1-hover; ;
+    background-color:  $primary-2-hover;
+    border-color:   $primary-2-hover;
     box-shadow: 0 0 0 0.2rem rgba(255, 143, 28, 0.25);
 }
 .btn-primary.disabled, .btn-primary:disabled, .btn-outline-primary.disabled, .btn-outline-primary:disabled {
     color: #fff;
-    background-color: $primary-1-hover; ;
-    border-color: $primary-1-hover; ;
+    background-color:  $primary-2-hover;
+    border-color:  $primary-2-hover;
 }
   
 .btn-outline-primary:not(:disabled):not(.disabled):active, .btn-outline-primary:not(:disabled):not(.disabled).active{
     color: #fff;
-    background-color: $primary-1-hover; ;
-    border-color: $primary-1-hover; ;
+    background-color: $primary-2-hover;
+    border-color: $primary-2-hover;
 }
   
 .btn-outline-primary:not(:disabled):not(.disabled):active:focus, .btn-outline-primary:not(:disabled):not(.disabled).active:focus{
@@ -479,18 +510,21 @@ textarea {
 
 .btn-outline-primary { 
     background-color: transparent;
-    border: 1px solid $primary-1;
-    border-radius: 50px;
-    color: $primary-1;
-    font-size: 16px;
-    font-weight: 300;
-    height: 45px;
+    border: 1px solid $primary-2;
+    border-radius: 0px;
+    color: $primary-2;
+    font-size: 25px;
+    font-weight: bold;
+    height: 47px;
     text-align: center;
     width: 100%;
     transition: $transition;
+    .bi { 
+        font-size: 16px;
+    }
     &:hover { 
-        background-color: $primary-1;
-        border: 1px solid $primary-1;
+        background-color: $primary-2;
+        border: 1px solid $primary-2;
         color: white; 
     }
 }
@@ -661,7 +695,7 @@ textarea {
 }
 
 
-/* Preloader Css */
+/*----- Preloader Css -----*/
 .preloader{
     background-color: #fff;
     height: 100%;
@@ -675,6 +709,51 @@ textarea {
     align-items: center;
     justify-content: center;
     .img-loader { 
-        max-width: 320px;
+        max-width: 250px;
+    }
+}
+
+/*----- Animate -----*/
+@media (min-width: $size-lg) {
+    @keyframes fadeInUp {
+        from {
+            transform: translate3d(0,40px,0)
+        }
+        to {
+            transform: translate3d(0,0,0);
+            opacity: 1
+        }
+    }
+    @-webkit-keyframes fadeInUp {
+        from {
+            transform: translate3d(0,40px,0)
+        }
+        to {
+            transform: translate3d(0,0,0);
+            opacity: 1
+        }
+    }
+    .animated {
+        animation-duration: 1s;
+        animation-fill-mode: both;
+        -webkit-animation-duration: 1s;
+        -webkit-animation-fill-mode: both
+    }
+    .animatedFadeInUp {
+        opacity: 0
+    }
+    .fadeInUp {
+        opacity: 0;
+        animation-name: fadeInUp;
+        -webkit-animation-name: fadeInUp;
+    }
+    .delay-1000ms { 
+        animation-delay: 1000ms;
+    }
+    .delay-1800ms { 
+        animation-delay: 1800ms;
+    }
+    .delay-2600ms { 
+        animation-delay: 2600ms;
     }
 }

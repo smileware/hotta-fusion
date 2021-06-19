@@ -290,7 +290,7 @@
         <section class="container-fluid">
             <div class="row">
                 <div class="col px-0">
-                    <div class="swiper-container swiper">
+                    <div class="swiper-container -main-banner swiper-homepage">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <img src="./img/banner.svg" alt="" class="_desktop" />
@@ -310,24 +310,63 @@
                 </div>
             </div>
         </section>
-        <!--  -->
+        <!-- Ready To Fusion Video -->
         <section class="ready-to-fusion">
             <div class="container">
                 <div class="row justify-content-md-center">
                     <div class="col-12 col-lg-6 ready-to-fusion--content">
-                        <img src="./img/fusion-dude.png" class="w-100" alt="" />
-                        <div class="ready-to-fusion--control">
-                            <button class="btn-video pulse animate">
-                                <i class="bi bi-play-fill"></i>
-                                <span>
-                                    PLAY
-                                </span>
-                            </button>
-                            <img src="./img/r-u-ready.svg" alt="" />
-                        </div>
+                        <img src="./img/fusion-dude.svg" class="w-100" alt="" />
+                        <button class="btn-video pulse animate" data-toggle="modal" data-target="#siteVideo">
+                            <i class="bi bi-play-fill"></i>
+                            <span>
+                                PLAY
+                            </span>
+                        </button>
                     </div>
                 </div>
             </div>
+        </section>
+        <!-- I AM FUSION -->
+        <section class="iam-fusion pt-5">
+            <div class="container-fluid px-30">
+                <div class="row">
+                    <div class="col-lg-12 text-center mb-5">
+                        <img src="img/i-am-fusion.svg" alt="">
+                        <h3 class="text-grey">
+                            คนฟิวชั่น เป็นแบบไหน
+                        </h3>
+                    </div>
+                    <div class="swiper-container swiper-iam-mobile">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide iam-animate animated animatedFadeInUp fadeInUp delay-1000ms">
+                                <img src="img/iam-trendy.png" alt="">
+                                <h3> ทันสมัย</h3>
+                                <span>ต้องเป็นคนทันสมัยใส่ใจตัวเอง</span>
+                            </div>
+                            <div class="swiper-slide iam-animate animated animatedFadeInUp fadeInUp delay-1800ms">
+                                <img src="img/iam-fresh.png" alt="">
+                                <h3> สดชื่นสดใส</h3>
+                                <span>มีความสดใสพร้อมเติมพลังบวก</span>
+                            </div>
+                            <div class="swiper-slide iam-animate animated animatedFadeInUp fadeInUp delay-2600ms" >
+                                <img src="img/iam-different.png" alt="">
+                                <h3>ชอบความแตกต่าง</h3>
+                                <span>มองหาสิ่งใหม่ๆให้กับตัวเองอยู่เสมอ</span>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination dark-theme"></div>
+                    </div>
+                    <div class="col-lg-12 text-center mt-3 mt-lg-0">
+                        <button class="btn btn-outline-primary">
+                            รู้จักเราเพิ่มเติม <i class="bi bi-chevron-right ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>  
+        </section>
+        <!-- Reason To Drink -->
+        <section class="reason-fusion py-5">
+
         </section>
     </main>
     <!-- End:: Content -->
@@ -374,6 +413,26 @@
         </div>
     </div>
     <!-- End:: Search Modal -->
+    <!-- Start:: Video Modal -->
+    <div class="modal modal-video fade " id="siteVideo" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="siteVideoLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="bi bi-x"></i>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <div style="position:relative;padding-top:56.25%;">
+                      <iframe src="https://youtu.be/H3X7mw2PitM" frameborder="0"allowfullscreen
+                        style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End:: Videos Modal -->
 </body>
 
 <!-- Vendor -->

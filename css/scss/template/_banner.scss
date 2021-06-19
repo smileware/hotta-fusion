@@ -1,7 +1,27 @@
 .swiper-container {
     width: 100%;
-    height: 640px;
+    .-main-banner { 
+        height: 640px;
+    }
+}
+.swiper-container {
+    z-index: auto !important;
   }
+  
+  .swiper-wrapper {
+    z-index: auto !important;
+  }
+  
+.swiper-iam-mobile { 
+    .swiper-slide { 
+        height: 100%;
+        width: 33.3333%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: calc(#{$space} * 4);
+    }
+}
 
 .swiper-slide {
     text-align: center;
@@ -39,9 +59,11 @@
             height:  4px;
             background-color: rgba(255, 255,255,1);
         }
-        &.dark-theme { 
+    }
+    &.dark-theme { 
+        .swiper-pagination-bullet { 
+            background-color: #ACACAC;
             &.swiper-pagination-bullet-active { 
-                height:  4px;
                 background-color: $primary-2;
             }
         }
