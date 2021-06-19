@@ -51,3 +51,15 @@ document
 $(window).on('load', function() {
     $('.preloader').fadeOut('slow');;
 });
+
+/*------- Banner ------*/
+
+var elms = document.getElementsByClassName( 'swiper' );
+for ( var i = 0, len = elms.length; i < len; i++ ) {
+	new Swiper( elms[ i ] , {
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        }
+    });
+}

@@ -286,7 +286,49 @@
     <div class="site-header-space _mobile"></div>
     <!-- Start:: Content -->
     <main>
-    
+        <!-- Banner -->
+        <section class="container-fluid">
+            <div class="row">
+                <div class="col px-0">
+                    <div class="swiper-container swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="./img/banner.svg" alt="" class="_desktop" />
+                                <img src="./img/banner-m.svg" alt="" class="_mobile" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./img/banner.svg" alt="" class="_desktop" />
+                                <img src="./img/banner-m.svg" alt="" class="_mobile" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./img/banner.svg" alt="" class="_desktop" />
+                                <img src="./img/banner-m.svg" alt="" class="_mobile" />
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--  -->
+        <section class="ready-to-fusion">
+            <div class="container">
+                <div class="row justify-content-md-center">
+                    <div class="col-12 col-lg-6 ready-to-fusion--content">
+                        <img src="./img/fusion-dude.png" class="w-100" alt="" />
+                        <div class="ready-to-fusion--control">
+                            <button class="btn-video pulse animate">
+                                <i class="bi bi-play-fill"></i>
+                                <span>
+                                    PLAY
+                                </span>
+                            </button>
+                            <img src="./img/r-u-ready.svg" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <!-- End:: Content -->
     <!-- Start:: Footer -->
@@ -308,37 +350,27 @@
     <!-- Start:: Search Modal -->
     <div class="modal search-modal fade" id="siteSearch" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="siteSearchLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <i class="bi bi-x"></i>
-            </button>
-            </div>
-
-            <div class="modal-body">
-
-            <form role="search" method="get" class="search-form" action="#">
-                <div class="input-group input-group-custom mb-3">
-                <input type="text" class="form-control" placeholder="ค้นหา">
-                <div class="input-group-append">
-                    <span class="input-group-text">
-                        <i class="bi bi-search"></i>
-                    </span>
-                </div>
-                </div>
-            </form>
-
-            <!-- <form role="search" method="get" class="search-form" action="#">
-                <label for="search">
-                <input type="search" class="search-field" placeholder="ค้นหา บทความ, ข่าวสาร" value="" name="search" />
-                </label>
-                <button type="submit" class="btn btn-primary">
-                <i class="bi bi-search"></i>
-                ค้นหา
+            <div class="modal-content">
+                <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <i class="bi bi-x"></i>
                 </button>
-            </form> -->
+                </div>
+
+                <div class="modal-body">
+
+                <form role="search" method="get" class="search-form" action="#">
+                    <div class="input-group input-group-custom mb-3">
+                    <input type="text" class="form-control" placeholder="ค้นหา">
+                    <div class="input-group-append">
+                        <span class="input-group-text">
+                            <i class="bi bi-search"></i>
+                        </span>
+                    </div>
+                    </div>
+                </form>
+                </div>
             </div>
-        </div>
         </div>
     </div>
     <!-- End:: Search Modal -->
@@ -348,6 +380,7 @@
 <script src="js/vendor/jquery.min.js"></script> 
 <script src="js/vendor/popper.min.js"></script> 
 <script src="js/vendor/bootstrap.min.js"></script> 
+<script src="js/vendor/swiper-bundle.js"></script> 
 <script src="js/vendor/magnific-popup.min.js"></script> 
 <!-- Javascript Custom --> 
 <script src="js/script-custom.js"></script> 

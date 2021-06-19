@@ -1,0 +1,105 @@
+.ready-to-fusion {
+    background-image: url("../img/ready-to-fusion-bg.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .ready-to-fusion--content {
+        padding-top: calc(#{$space} * 3);
+        position: relative;
+    }
+    .ready-to-fusion--control {
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        transform: translate(-50%, -0%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+            max-width: 200px;
+        }
+
+        .pulse {
+            position: absolute;
+            top: -100%;
+            left: 50%;
+            cursor: pointer;
+            transform: translate(-50%, -0%);
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background: #fff;
+            color: $primary-1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border: none;
+            transition: $transition;
+            &:hover {
+                background-color: #eee;
+            }
+            i {
+                font-size: 40px;
+            }
+            span {
+                font-size: 25px;
+                font-weight: bold;
+            }
+        }
+
+        .pulse:before,
+        .pulse:after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: -20px;
+            bottom: -20px;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            opacity: 0;
+            background-visibility: hidden;
+        }
+
+        .animate:before,
+        .animate:after {
+            animation: animate 1.5s linear infinite;
+        }
+
+        .animate:after {
+            animation-delay: 0.5s;
+        }
+
+        @keyframes animate {
+            0% {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1.2);
+                opacity: 0;
+            }
+        }
+    }
+}
+
+/* ------- IPAD PRO ABOVE ---------*/
+@media (min-width: $size-lg) {
+    .ready-to-fusion {
+        .ready-to-fusion--control {
+            img {
+                max-width: 100%;
+            }
+            .pulse {
+                top: -50%;
+                left: 50%;
+            }
+        }
+    }
+}
