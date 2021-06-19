@@ -10,6 +10,11 @@
     .home & {
         border-bottom: none;
     }
+    z-index: 900;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
 }
 .site-nav-d {
     height: $nav-height-d;
