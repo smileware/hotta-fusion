@@ -4,13 +4,6 @@
         height: 640px;
     }
 }
-.swiper-container {
-    z-index: auto !important;
-  }
-  
-  .swiper-wrapper {
-    z-index: auto !important;
-  }
   
 .swiper-iam-mobile { 
     .swiper-slide { 
@@ -20,6 +13,142 @@
         flex-direction: column;
         text-align: center;
         padding-bottom: calc(#{$space} * 4);
+    }
+}
+.swiper-reason-mobile { 
+    overflow: hidden;
+    padding-bottom: 100px;
+    .swiper-slide { 
+        height: 100%;
+        width: 33.3333%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: calc(#{$space} * 4);
+        background-color: transparent;
+        img { 
+            height: auto;
+        }
+        &.-left { 
+            .reason-img { 
+                position: relative;
+                .arrow-right { 
+                    width: auto;
+                    position: absolute;
+                    top: 50%;
+                    right: -50px;
+                }
+            }
+            .item-container{ 
+                width: 100%;
+            }
+            img { 
+                max-width: 100%;
+                margin: 0 auto;
+            }
+        }
+        &.-center { 
+
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            .arrow-down { 
+                position: absolute;
+                bottom: -50px;
+                width: 50px;
+            }
+            .arrow-circle { 
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+            }
+            .item-container { 
+                object-fit: unset;
+                position: absolute;
+                top: 50%;
+                left: calc(50% - -30px);
+                -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+                img { 
+                    width: 250px;
+                    object-fit: unset;
+                }
+            }
+        }
+        &.-right { 
+            justify-content: flex-end;
+            .reason-img { 
+                position: relative;
+                .arrow-left { 
+                    width: auto;
+                    position: absolute;
+                    top: 50%;
+                    left: -50px;
+                }
+            }
+            .item-container{ 
+                width: 100%;
+            }
+            img { 
+                max-width: 100%;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+@media (min-width: $size-md) {
+    .swiper-reason-mobile { 
+        .swiper-slide { 
+            &.-center { 
+                .arrow-circle { 
+                    width: 70%;
+                }
+            }
+        }
+    }
+}
+@media (min-width: $size-lg) {
+    .swiper-reason-mobile { 
+        overflow: visible;
+        .swiper-slide { 
+            &.-left { 
+                .item-container{ 
+                    width: calc(100% - 80px);
+                }
+                img { 
+                    max-width: 80%;
+                }
+            }
+            &.-center { 
+                @keyframes spin {
+                    from {
+                        transform: translate(-50%, -50%) rotate(0deg);
+                    }
+                    to {
+                        transform: translate(-50%, -50%) rotate(360deg);
+                    }
+                }
+                .arrow-circle { 
+                    animation-name: spin;
+                    animation-duration: 5000ms;
+                    animation-iteration-count: infinite;
+                    animation-timing-function: linear; 
+                    object-fit: initial;
+                }
+            }
+            &.-right { 
+                .item-container{ 
+                    width: calc(100% - 80px);
+                }
+                img { 
+                    max-width: 80%;
+                }
+            }
+        }
     }
 }
 

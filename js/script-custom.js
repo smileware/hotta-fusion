@@ -72,5 +72,8 @@ if(isMobile()) {
           clickable: true,
         }
     });
+    var reasonMobileCarousel = new Swiper( ".swiper-reason-mobile");
 }
 
+/*------- Animated ------*/
+new WOW().init();

@@ -114,4 +114,20 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    padding-top: calc(72px + 80px); // 72 is height of triangle.
+                       
+    .reason-content { 
+        background-color: white;
+        box-shadow: 6px 12px 20px rgba(0 ,0 ,0, .16);
+        margin: $space auto;
+        padding: calc(#{$space} / 2) $space;
+        width: 80%;
+        h3 { 
+            margin-bottom: 0;
+            line-height: 1;
+        }
+        span { 
+            font-size: 25px;
+        }
+    }
 }

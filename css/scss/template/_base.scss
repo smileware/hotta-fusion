@@ -733,6 +733,29 @@ textarea {
             opacity: 1
         }
     }
+    
+     
+    @keyframes fadeInDown {
+        0% {
+           opacity: 0;
+           transform: translateY(-40px);
+        }
+        100% {
+           opacity: 1;
+           transform: translateY(0);
+        }
+    }
+    @-webkit-keyframes fadeInDown {
+        0% {
+           opacity: 0;
+           -webkit-transform: translateY(-40px);
+        }
+        100% {
+           opacity: 1;
+           -webkit-transform: translateY(0);
+        }
+    }
+   
     .animated {
         animation-duration: 1s;
         animation-fill-mode: both;
@@ -747,6 +770,11 @@ textarea {
         animation-name: fadeInUp;
         -webkit-animation-name: fadeInUp;
     }
+    .fadeInDown {
+        -webkit-animation-name: fadeInDown;
+        animation-name: fadeInDown;
+     }
+     
     .delay-1000ms { 
         animation-delay: 1000ms;
     }
