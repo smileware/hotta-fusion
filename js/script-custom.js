@@ -58,7 +58,7 @@ $(window).on('load', function() {
         renderer: "svg",
         loop: true,
         autoplay: true,
-        path: `../img/animation/loading-logo.json`
+        path: `./img/animation/loading-logo.json`
     });
     $('.preloader').fadeOut('slow');
 });

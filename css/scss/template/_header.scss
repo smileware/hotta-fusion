@@ -1,5 +1,8 @@
 .site-header-space { 
     height: $nav-height-m;
+    @media (min-width: $size-lg) {
+        height: $nav-height-d;
+    }
 }
 .site-header {
     width: 100%;
