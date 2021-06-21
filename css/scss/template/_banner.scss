@@ -52,6 +52,7 @@
             position: relative;
             justify-content: center;
             align-items: center;
+            position: relative;
             .arrow-down { 
                 position: absolute;
                 bottom: -50px;
@@ -59,9 +60,11 @@
             }
             .arrow-circle { 
                 position: absolute;
-                left: 50%;
-                top: 50%;
-                transform: translate(-50%, -50%);
+                left: inherit;
+                top: 26px;
+                // left: 50%;
+                // top: 50%;
+                // transform: translate(-50%, -50%);
                 width: 100%;
                 height: auto;
                 object-fit: contain;
@@ -106,6 +109,7 @@
             &.-center { 
                 .arrow-circle { 
                     width: 70%;
+                    top: 14%;
                 }
             }
         }
@@ -126,13 +130,14 @@
             &.-center { 
                 @keyframes spin {
                     from {
-                        transform: translate(-50%, -50%) rotate(0deg);
+                        transform: rotate(0deg);
                     }
                     to {
-                        transform: translate(-50%, -50%) rotate(360deg);
+                        transform: rotate(360deg);
                     }
                 }
                 .arrow-circle { 
+                    top: 26px;
                     animation-name: spin;
                     animation-duration: 5000ms;
                     animation-iteration-count: infinite;

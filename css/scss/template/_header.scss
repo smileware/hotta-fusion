@@ -111,6 +111,7 @@
     overflow-x: hidden;
     transition: 0.3s;
     box-shadow: $box-shadow;
+    z-index: 999;
     .fullscreen-nav--menu { 
         position: relative;
         top: 10%;
@@ -130,7 +131,7 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         height: 100%;

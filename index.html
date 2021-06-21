@@ -14,7 +14,7 @@
 <body class="home">
     <!-- Start:: PreLoader -->
     <div class="preloader">
-        <img src="./img/Logo.png" alt="Hotta Fusion Logo" class="img-loader" />
+        <div id="loading-logo" class="lottie-animated img-loader"></div>
     </div>
     <!-- End:: PreLoader -->
     <!-- Start:: Navbar -->
@@ -29,7 +29,7 @@
                                 <b></b>
                             </div> 
                             <a href="index.html">
-                                <img src="./img/Logo.png" class="navbar-brand" alt="Hotta Fusion Logo" />
+                                <img src="./img/logo.png" class="navbar-brand" alt="Hotta Fusion Logo" />
                             </a>
                         </div>
                         <div class="col-5 d-flex justify-content-end align-items-center">
@@ -72,90 +72,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- Fullscreen Nav  -->
-                <div id="fullScreenNav" class="fullscreen-nav">
-                    <div class="side-bg" id="sideBgNav"></div>
-                    <a href="javascript:void(0)" class="btn-close" onclick="closeFullScreenNav()">&times;</a>
-                    <div class="fullscreen-nav--menu">
-                        <form role="search" method="get" class="search-form" action="#">
-                            <div class="input-group input-group-custom mb-3">
-                            <input type="text" class="form-control" placeholder="ค้นหา">
-                            <div class="input-group-append">
-                                <span class="input-group-text">
-                                    <i class="bi bi-search"></i>
-                                </span>
-                            </div>
-                            </div>
-                        </form>
-                        <div class="row">
-                            <div class="col-6">
-                                <ul class="nav-menu">
-                                    <li class="nav-item ">
-                                        <a class="nav-link" href="index.html">
-                                            <img src="./img/menu-icon-iam.svg" alt="" class="icon">
-                                        I am fusion
-                                        </a>
-                                    </li>
-                                    <li class="nav-item ">
-                                        <a class="nav-link" href="index.html">
-                                        <img src="./img/menu-icon-drink.svg" alt="" class="icon">
-                                        Fusion Drink
-                                        </a>
-                                    </li>
-                                    <li class="nav-item ">
-                                        <a class="nav-link" href="index.html">
-                                            <img src="./img/menu-icon-find.svg" alt="" class="icon">
-                                        Find Fusion
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-6">
-                                <ul class="nav-menu">
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">
-                                            <img src="./img/menu-icon-trend.svg" alt="" class="icon">
-                                            FUSION TREND
-                                        </a>
-                                    </li>
-                                    <li class="nav-item  nav-item-has-children">
-                                        
-                                        <a class="nav-link" href="#">
-                                            <img src="./img/menu-icon-news.svg" alt="" class="icon">
-                                            FUSION NEWS
-                                        </a>
-                                        <ul class="sub-menu">
-                                            <li class="nav-item">
-                                                <a href="#" class="menu-item">VIDEO</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a href="#" class="menu-item">NEWS</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a href="#" class="menu-item">ACTIVITY</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item  nav-item-has-children">
-                                        
-                                        <a class="nav-link" href="#">
-                                            <img src="./img/menu-icon-contact.svg" alt="" class="icon">
-                                            CONTACT FUSION
-                                        </a>
-                                        <ul class="sub-menu">
-                                            <li class="nav-item">
-                                                <a href="#" class="menu-item">CONTACT FORM</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a href="#" class="menu-item">FAQS</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <!-- End:: Desktop Menu -->
 
                 <div class="navbar-m _mobile">
@@ -163,7 +79,7 @@
                         <i class="bi bi-search"></i>
                     </a>
                     <a class="navbar-brand" href="index.html">
-                    <img src="./img/Logo.png" alt="Hotta Fusion Logo" width="100px"/>
+                    <img src="./img/logo.png" alt="Hotta Fusion Logo" width="100px"/>
                     </a>
                     <div class="site-toggle">
                         <b></b>
@@ -282,6 +198,91 @@
             </div>
         </div>
     </header>
+    <!-- Start:: Fullscreen Nav  -->
+    <div id="fullScreenNav" class="fullscreen-nav">
+        <div class="side-bg" id="sideBgNav"></div>
+        <a href="javascript:void(0)" class="btn-close" onclick="closeFullScreenNav()">&times;</a>
+        <div class="fullscreen-nav--menu">
+            <form role="search" method="get" class="search-form" action="#">
+                <div class="input-group input-group-custom mb-3">
+                <input type="text" class="form-control" placeholder="ค้นหา">
+                <div class="input-group-append">
+                    <span class="input-group-text">
+                        <i class="bi bi-search"></i>
+                    </span>
+                </div>
+                </div>
+            </form>
+            <div class="row">
+                <div class="col-6">
+                    <ul class="nav-menu">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="index.html">
+                                <img src="./img/menu-icon-iam.svg" alt="" class="icon">
+                            I am fusion
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="index.html">
+                            <img src="./img/menu-icon-drink.svg" alt="" class="icon">
+                            Fusion Drink
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="index.html">
+                                <img src="./img/menu-icon-find.svg" alt="" class="icon">
+                            Find Fusion
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-6">
+                    <ul class="nav-menu">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <img src="./img/menu-icon-trend.svg" alt="" class="icon">
+                                FUSION TREND
+                            </a>
+                        </li>
+                        <li class="nav-item  nav-item-has-children">
+                            
+                            <a class="nav-link" href="#">
+                                <img src="./img/menu-icon-news.svg" alt="" class="icon">
+                                FUSION NEWS
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="nav-item">
+                                    <a href="#" class="menu-item">VIDEO</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="menu-item">NEWS</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="menu-item">ACTIVITY</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item  nav-item-has-children">
+                            
+                            <a class="nav-link" href="#">
+                                <img src="./img/menu-icon-contact.svg" alt="" class="icon">
+                                CONTACT FUSION
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="nav-item">
+                                    <a href="#" class="menu-item">CONTACT FORM</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="menu-item">FAQS</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End:: Fullscreen Nav -->
     <!-- End:: Navbar -->
     <div class="site-header-space _mobile"></div>
     <!-- Start:: Content -->
@@ -484,6 +485,7 @@
 <script src="js/vendor/jquery.min.js"></script> 
 <script src="js/vendor/popper.min.js"></script> 
 <script src="js/vendor/bootstrap.min.js"></script> 
+<script src="js/vendor/lottie.min.js"></script> 
 <script src="js/vendor/swiper-bundle.js"></script> 
 <script src="js/vendor/wow.js"></script> 
 <script src="js/vendor/magnific-popup.min.js"></script> 

@@ -53,7 +53,14 @@ document
 
 /*------- Preloader ------*/
 $(window).on('load', function() {
-    $('.preloader').fadeOut('slow');;
+    lottie.loadAnimation({
+        container: document.getElementById("loading-logo"),
+        renderer: "svg",
+        loop: true,
+        autoplay: true,
+        path: `../img/animation/loading-logo.json`
+    });
+    $('.preloader').fadeOut('slow');
 });
 
 /*------- Banner ------*/
