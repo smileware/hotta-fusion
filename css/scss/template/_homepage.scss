@@ -131,3 +131,101 @@
         }
     }
 }
+
+.swiper-feature-product { 
+    word-wrap: break-word;
+    .slide-header { 
+        position: absolute;
+        width: 90%;
+        left: 5%;
+        top: 50px;
+        z-index: 2;
+        img { 
+            height: auto;
+            width: auto;
+        }
+    }
+    .product-container { 
+        .product-cold { 
+            opacity: 1;
+            transition: $transition;
+        }
+        .product-hot { 
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            opacity: 0;
+            transition: $transition;
+        }
+        img { 
+            width: 100%;
+        }
+        a.product-link {
+            position: relative;
+            display: block;
+            .btn-viewmore-hover { 
+                opacity: 0;
+            }
+        }
+    }
+    .slide-button { 
+        position: absolute;
+        bottom: 50px;
+        left: calc(50% - 90px);
+        z-index: 1;
+    }
+}
+
+@media (min-width: $size-lg) {
+    
+    .swiper-feature-product { 
+        .slide-header { 
+            width: 33.33%;
+            left: 33.33%;
+        }
+        .product-container { 
+            a.product-link {
+                .btn-viewmore-hover { 
+                    height: 65px;
+                    width: 65px;
+                    border-radius: 50%;
+                    background-color: $primary-1;
+                    opacity: 0;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    -webkit-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%);
+                    display: flex;
+                    align-items: center;
+                    justify-self: center;
+                    flex-direction: column;
+                    color: white;
+                    padding-top: 5px;
+                    box-shadow: $box-shadow;
+                    transition: $transition;
+                    i { 
+                        font-size: 30px;
+                    }
+                    span { 
+                        font-size: 20px;
+                        line-height: 0.5;
+                    }
+                }
+                &:hover { 
+                    .btn-viewmore-hover { 
+                        top: 20%;
+                        opacity: 1;
+                    }
+                    .product-cold {
+                        opacity: 0;
+                    }
+                    .product-hot { 
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}

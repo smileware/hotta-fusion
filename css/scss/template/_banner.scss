@@ -4,6 +4,20 @@
         height: 640px;
     }
 }
+@media (min-width: $size-md) {
+    .swiper-container {
+        &.-main-banner { 
+            height: auto;
+        }
+    }
+}
+@media (min-width: $size-lg) {
+    .swiper-container {
+        &.-main-banner { 
+            height: 640px;
+        }
+    }
+}
   
 .swiper-iam-mobile { 
     .swiper-slide { 
@@ -103,7 +117,52 @@
         }
     }
 }
+.swiper-feature-product { 
+    .swiper-wrapper { 
+        padding-bottom: 80px;
+    }
+    .swiper-slide { 
+        height: 100%;
+        width: 33.3333%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: calc(#{$space} * 4);
+        background-color: transparent;
+        min-height: 800px;
+        padding-top: 200px;
+        padding-bottom: 90px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .-left { 
+        background-image: url('../img/product-bg-green1.svg');
+        background-position: top center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .-center {
+        background-image: url('../img/product-bg-green2.svg');
+        background-position: top center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .-right { 
+        background-image: url('../img/product-bg-green3.svg');
+        background-position: top center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .pagination-feature { 
+        bottom: 120px;
+    }
+}
 @media (min-width: $size-md) {
+    .swiper-feature-product { 
+        .swiper-slide { 
+            min-height: 1200px;
+        }
+    }
     .swiper-reason-mobile { 
         .swiper-slide { 
             &.-center { 
@@ -116,6 +175,11 @@
     }
 }
 @media (min-width: $size-lg) {
+    .swiper-feature-product { 
+        .swiper-slide { 
+            min-height: 900px;
+        }
+    }
     .swiper-reason-mobile { 
         overflow: visible;
         .swiper-slide { 

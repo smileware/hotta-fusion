@@ -191,6 +191,13 @@ span{
     }
 }
 
+/* ----- Display ----- */
+@media (min-width: $size-lg) { 
+    .lg-invisible { 
+        visibility: hidden;
+    }
+}
+
 /* ----- Grid ----- */
 .grid {
     display: grid;
@@ -528,6 +535,30 @@ textarea {
         color: white; 
     }
 }
+
+.btn-outline-light { 
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 0px;
+    color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+    height: 47px;
+    text-align: center;
+    width: 100%;
+    transition: $transition;
+    padding-left: calc(#{$space} * 2);
+    padding-right: calc(#{$space} * 2);
+    .bi { 
+        font-size: 16px;
+    }
+    &:hover { 
+        background-color: $primary-2;
+        border: 1px solid $primary-2;
+        color: white; 
+    }
+}
+
 .btn-light { 
     background-color: #fff;
     border: transparent;
@@ -540,7 +571,7 @@ textarea {
 }
 
 @media (min-width: $size-lg) { 
-    .btn-primary, .btn-outline-primary  {
+    .btn-primary, .btn-outline-primary, .btn-outline-light  {
         width: 180px;
         min-width: 180px;
     }

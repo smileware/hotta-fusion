@@ -80,6 +80,12 @@ if(isMobile()) {
         }
     });
     var reasonMobileCarousel = new Swiper( ".swiper-reason-mobile");
+    var iamMobileCarousel = new Swiper( ".swiper-feature-product" , {
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        }
+    });
 }
 
 /*------- Animated ------*/
