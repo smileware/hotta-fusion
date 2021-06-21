@@ -172,7 +172,8 @@
     .slide-button { 
         position: absolute;
         bottom: 50px;
-        left: calc(50% - 90px);
+        left: 30px;
+        right: 30px;
         z-index: 1;
     }
 }
@@ -226,6 +227,10 @@
                     }
                 }
             }
+        }
+        .slide-button { 
+            left: calc(50% - 90px);
+            right: unset;
         }
     }
 }
