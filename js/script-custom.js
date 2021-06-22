@@ -24,10 +24,10 @@ document.addEventListener(
         if (event.target.matches(".site-toggle")) {
             if (event.target.classList.contains("active")) {
                 removeClass(".site-toggle, .site-nav-m", "active");
-                removeClass("#masthead", "show-nav");
+                removeClass("body", "show-nav");
             } else {
                 addClass(".site-toggle, .site-nav-m", "active");
-                addClass("#masthead", "show-nav");
+                addClass("body", "show-nav");
             }
         }
         if (event.target.matches("#site-nav-m .nav-item-has-children > svg")) {
@@ -69,6 +69,26 @@ var homepageBanner = new Swiper( ".swiper-homepage" , {
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
+    }
+});
+var brandCarousel = new Swiper(".swiper-brand", {
+    spaceBetween: 5,
+    slidesPerView: 3,
+    slidesPerColumn: 2,
+    slidesPerColumnFill: "row",
+    loop: false,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+        // Desktop
+        768: {
+            slidesPerView: 6,
+            spaceBetween: 30,
+            slidesPerColumn: 1,
+            loop: true,
+        }
     }
 });
 // Mobile
