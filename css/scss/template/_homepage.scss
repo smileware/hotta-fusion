@@ -267,12 +267,54 @@
 .fusion-blog { 
     background-color: #F5F5F5;
 }
+.fusion-time{ 
+    background-image: url('../img/fusion-time-bg.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    .ig-footer, .ig-header { 
+        background-color: white;
+        max-width: 100%;
+        margin: 0 30px;
+        img { 
+            width: 100%;
+        }
+        .ig-meta { 
+            padding: 20px;
+            .title { 
+                font-family:  $font-topic;
+                font-weight: bold;
+                font-size: 20px;
+            }
+            .caption { 
+                font-family:  $font-topic;
+                font-weight: 400;
+                font-size: 20px;
+            }
+        }
+    }
+}
+@media (min-width: $size-md) {
+    
+    .fusion-time{ 
+        .ig-footer, .ig-header { 
+            margin: 0 30px;
+            max-width: 100%;
+        }
+    }
+}
 @media (min-width: $size-lg) {
     .find-fusion { 
         .find-fusion-2 { 
             padding-left: 100px;
             padding-top: 0;
             padding-bottom: 0;
+        }
+    }
+    .fusion-time{ 
+        .ig-footer, .ig-header { 
+            margin: 0 auto;
+            max-width: 365px
         }
     }
 }

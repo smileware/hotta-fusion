@@ -114,6 +114,65 @@ var trendBlogCarousel = new Swiper(".swiper-trend-blog", {
     }
 });
 
+// Slick
+var igSlider = $('.slick-center').slick({
+    centerMode: true,
+    slidesToShow: 5,
+    dots: false,
+    arrows: true,
+    swipe: false,
+    swipeToSlide: false,
+    variableWidth: true,
+    variableHeight: true,
+    prevArrow:"<button type='button' class='slick-arrow-custom slick-prev-custom'><i class='bi bi-chevron-left'></i></button>",
+    nextArrow:"<button type='button' class='slick-arrow-custom slick-next-custom'><i class='bi bi-chevron-right'></i></button>",
+    responsive: [
+        {
+            breakpoint: 992,
+            settings: {
+                centerMode: false,
+                slidesToShow: 1,
+                dots: false,
+                arrows: false,
+                swipe: true,
+                swipeToSlide: true,
+                variableWidth: false,
+                variableHeight: false,
+            }
+        }
+    ]
+});
+
+$('.slide').click('click', function(e){   
+    e.preventDefault();
+    var currentSlide = $(e.currentTarget).data('slick-index');
+    igSlider.slick( 'slickGoTo', parseInt(currentSlide) );
+});
+
+// Event after slide change
+$('.slick-center').on('afterChange', function(event, slick, currentSlide, nextSlide){
+    showIgCaption($('.slick-current').data('caption'));
+});
+
+// Run Initial Caption.
+showIgCaption($('.slick-current').data('caption'));
+function showIgCaption(caption) { 
+    $("#ig_caption").html(caption);
+}
+
+$('.-video').click(function(){ 
+    var isCurrent = $(this).parent('.slick-current').length;
+    if(isCurrent) { 
+        var isPlaying = $(this).hasClass('-playing');
+        $(this).toggleClass('-playing');
+        if(!isPlaying) { 
+            $(this).find('.video-ig').trigger('play'); // play
+        }else {
+            $(this).find('.video-ig').trigger('pause'); // pause
+        }
+    }
+});
+
 // Mobile
 if(isMobile()) { 
     var iamMobileCarousel = new Swiper( ".swiper-iam-mobile" , {
