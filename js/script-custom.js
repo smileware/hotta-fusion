@@ -91,6 +91,29 @@ var brandCarousel = new Swiper(".swiper-brand", {
         }
     }
 });
+var trendBlogCarousel = new Swiper(".swiper-trend-blog", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    centeredSlides: false,
+    grabCursor: true,
+    keyboard: {
+      enabled: true,
+    },
+    scrollbar: {
+      el: ".swiper-scrollbar",
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+        // Desktop
+        769: {
+            slidesPerView: 4,
+        }
+    }
+});
+
 // Mobile
 if(isMobile()) { 
     var iamMobileCarousel = new Swiper( ".swiper-iam-mobile" , {
