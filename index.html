@@ -983,7 +983,31 @@
         </div>
     </footer>
     <!-- End:: Footer -->
+    <div class="sticky-menu -hide" id="stickyMenu"> 
+        <button class="btn-toggle" onclick="sticky.toggle()">
+            <div id="toggle_text">
+                แสดง <i class="bi bi-chevron-up"></i>
+            </div>
+        </button>
+        <div class="sticky-menu--container">
+            <a href="" class="sticky-menu--item">
+                <div class="inner">
 
+                    <img src="./img/icon-sticky2.svg" alt="">
+                    สะสม<br />คะแนน
+                </div>
+            </a>
+            <a href="" class="sticky-menu--item">
+                <div class="inner">
+                    <img src="./img/icon-sticky1.svg" alt="">
+                    โปรโมชัน
+                </div>
+            </a>
+        </div>
+        <button class="btn-gotop" onclick="sticky.toTop()">
+            <i class="bi bi-chevron-double-up"></i>
+        </div>
+    </div>
     <!-- Start:: Search Modal -->
     <div class="modal search-modal fade" id="siteSearch" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="siteSearchLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered">

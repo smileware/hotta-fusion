@@ -192,3 +192,20 @@ if(isMobile()) {
 
 /*------- Animated ------*/
 new WOW().init();
+
+/* -------  Sticky Menu ------- */
+var sticky = {
+    toggle: function() {
+        var buttonText = $('#toggle_text');
+        if($("#stickyMenu").hasClass('-hide')) { 
+            $(buttonText).html(`ซ่อน <i class="bi bi-chevron-down"></i>`)
+        }else { 
+            $(buttonText).html(`แสดง <i class="bi bi-chevron-up"></i>`)
+        }
+        $("#stickyMenu").toggleClass('-hide');
+    },
+    toTop: function() { 
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; 
+    }
+}
