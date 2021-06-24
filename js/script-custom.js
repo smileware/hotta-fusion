@@ -114,6 +114,22 @@ var trendBlogCarousel = new Swiper(".swiper-trend-blog", {
     }
 });
 
+var trendHeroCarousel = new Swiper(".swiper-blog-hero", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    centeredSlides: false,
+    grabCursor: false,
+    loop: false,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    }
+});
+
 // Slick
 var igSlider = $('.slick-center').slick({
     centerMode: true,

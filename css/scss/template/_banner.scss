@@ -354,6 +354,34 @@
         }
     }
 }
+.swiper-button-next, .swiper-button-prev { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: $primary-2;
+    &::after { 
+        font-size: 20px;
+        color: white;
+    }
+    &.swiper-button-disabled { 
+        background-color: #E4E4E4;
+        opacity: 1;
+        &::after { 
+            color: $primary-2;
+        }
+    }
+}
+.swiper-button-prev { 
+    left: -60px;
+}
+.swiper-button-next { 
+    right: -60px;
+}
+.swiper-blog-hero { 
+    padding-bottom: 50px;
+}
 
 
 // Slick Slider
@@ -459,6 +487,62 @@
                     height: 365px;
                 }
             }
+        }
+    }
+}
+
+
+/* ----- PAGE BANNER ----- */
+.page-banner  {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    .row { 
+        min-height: 300px;
+    }
+    &.-trend { 
+        background-image: url('../img/trend-bg.svg');
+    }
+    .banner-brand { 
+        img { 
+            width: 218px;
+            max-width: 100%;
+            margin-right: $space;
+        }
+    }
+    .page-title { 
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding-left: 0;
+    }
+    .page-social{ 
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        h4 { 
+            padding-right: $space;
+            letter-spacing: 1px;
+        }
+        .social { 
+            .social-item { 
+                background-color: white;
+                width: 40px;
+                height: 40px;
+                img { 
+                    filter: none;
+                }
+            }
+        }
+    }
+}
+@media (min-width: $size-lg) {
+    .page-banner  {
+        .page-title { 
+            padding-left: 120px;
+        }
+        .page-social{ 
+            align-items: flex-end;
         }
     }
 }
