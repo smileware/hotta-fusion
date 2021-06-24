@@ -1256,3 +1256,62 @@ textarea {
         }
     }
 }
+
+
+/* ------------ Accordian ------------*/
+
+.accordion { 
+    .accordion-item { 
+        margin-bottom: $space;
+    }
+    .accordion-toggle { 
+        min-height: 100px;
+        display: flex;
+        flex-direction: row; 
+        background-color: white;
+        cursor: pointer;
+        .icon { 
+            background-color: $primary-1;
+            color: white;
+            width: 50px;
+            display: flex;
+            align-items: center;
+            .bi { 
+                font-size: 50px;
+            }
+        }
+        .title { 
+            font-family: $font-topic;
+            font-size: 25px;
+            font-weight: bold;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            padding: $space;
+            padding-right: 65px;
+            &::after { 
+                font-family: "bootstrap-icons";
+                font-weight: 900;
+                content: "\f286";
+                position: absolute;
+                right: 35px;
+                font-size: 25px;
+                color: $primary-1;
+                transition: $transition;
+            }
+        }
+        &.collapsed  {
+            .title { 
+                &::after { 
+                    transform: scaleY(-1);
+                }
+            }
+        }
+    }
+    .accordion-body { 
+        padding: $space $space-m;
+        font-size: 25px;
+        line-height: 30px;
+        color: #838383;
+    }
+}

@@ -22,8 +22,16 @@
         letter-spacing: 1px;
     }
 }
+
+.page-faq { 
+    background-color: #FF8F1C;
+    background-image: url('../img/faq-bg.svg');
+    background-size: 100% auto;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
 @media (min-width: $size-lg) {
-    
     .page-complete { 
         background-size: 30%;
         > div { 
@@ -31,8 +39,6 @@
         }
         
     }
-}
-@media (min-width: $size-lg) {
     .search-container  {
         max-width: 530px;
         margin: 0 auto;
