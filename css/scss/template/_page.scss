@@ -5,6 +5,33 @@
     background-repeat: no-repeat;
 }
 
+.page-complete { 
+    background-image: url('../img/fusion-complete-bg.svg');
+    background-size: 90%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    > div { 
+        min-height: 600px;
+    }
+    img { 
+        max-width: 185px;
+        margin: $space auto;
+    }
+    h1 { 
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+}
+@media (min-width: $size-lg) {
+    
+    .page-complete { 
+        background-size: 30%;
+        > div { 
+            min-height: 700px;
+        }
+        
+    }
+}
 @media (min-width: $size-lg) {
     .search-container  {
         max-width: 530px;
