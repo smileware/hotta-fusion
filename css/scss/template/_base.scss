@@ -116,6 +116,11 @@ span{
     border-radius: 20px;
 }
 @media (min-width: $size-lg) {
+    .px-lg-30 { 
+        padding: 0 $space-m !important;
+    }
+}
+@media (min-width: $size-lg) {
     .rounded-lg-top { 
         border-top-left-radius: 20px !important; 
         border-top-right-radius: 20px !important; 
