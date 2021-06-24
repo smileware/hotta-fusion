@@ -421,21 +421,60 @@ textarea {
 .pagination { 
     padding: calc(#{$space}  * 2) 0;
     justify-content: center;
-    .page-item { 
-        margin: 0 calc(#{$space}  / 3);
+    .prev, .next { 
         .page-link { 
-            width: 37px;
-            height: 37px;
-            border-radius: 50%;
-            background-color: $pagination-bg;
+            width: 40px;
+            height: 40px;
+            border-radius: 0%;
             padding: 0;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 18px;
-            color: $black;
-            border: none;
-
+            font-size: 20px;
+            color: white;
+            border: 0;
+            background-color: $primary-2;
+            margin: 0px;
+            transition: $transition;
+            &:hover { 
+                background-color: $primary-2-hover;
+               
+            }
+        }
+        &.-disabled  { 
+            cursor: not-allowed;
+            pointer-events: none;
+            .page-link { 
+                background-color: #E4E4E4;
+                color: $primary-2;
+            }
+        }
+    }
+    .prev { 
+        margin-right: calc(#{$space} / 2);
+    }
+    .next { 
+        margin-left: calc(#{$space} / 2);
+    }
+    .page-item { 
+        margin: 0;
+        .page-link { 
+            width: 38px;
+            height: 38px;
+            border-radius: 0%;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+            color: $text-color;
+            border: 0;
+            border-bottom: 4.5px solid #E4E4E4;
+            background-color: transparent;
+            margin: 0;
+        }
+        a.page-link:hover { 
+            color: $primary-2;
         }
         &.dots {
             .page-link { 
@@ -445,28 +484,57 @@ textarea {
         }
         &.active  { 
             .page-link { 
-                background-color: $primary-1;
-                color: white;
+                color: $primary-2;
+                border-bottom: 4.5px solid $primary-2;
             }
         }
     }
 }
 @media (max-width: $size-iphone5) { 
-    .pagination { 
+    .pagination {
+        .prev, .next { 
+            .page-link { 
+                width: 35px;
+                height: 35px;
+                font-size: 18px;
+            }
+        } 
+        .prev { 
+            margin-right: calc(#{$space} / 2);
+        }
+        .next { 
+            margin-left: calc(#{$space} / 2);
+        }
         .page-item { 
             .page-link { 
                 width: 30px;
                 height: 30px;
+                font-size: 20px;
             }
         }
     }
 }
 @media (min-width: $size-lg) { 
-    .pagination { 
+    .pagination {
+        .prev, .next { 
+            .page-link { 
+                width: 60px;
+                height: 60px;
+                font-size: 20px;
+            }
+        } 
+        .prev { 
+            margin-right: $space;
+        }
+        .next { 
+            margin-left: $space;         
+        }
         .page-item { 
             .page-link { 
                 width: 45px;
                 height: 45px;
+                margin: 10px 0;
+                font-size: 30px;
             }
         }
     }
@@ -800,10 +868,73 @@ textarea {
         color: #ACACAC;
         margin-right: calc(#{$space} / 2);
         letter-spacing: 1px;
+        text-transform: uppercase;
     }
 }
-
-
+.category-filter { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 25px;
+    .filter-label  {
+        margin-bottom: 0;
+        margin-right: $space;
+        letter-spacing: 1px;
+    }
+    .filter-dropdown { 
+        width: 100%;
+        .dropdown-toggle { 
+            border-radius: 0;
+            border-bottom: 1px solid #BEBEBE;
+            padding: 5px 0;
+            min-width: 100%;
+            display: block;
+            color: $text-color;
+            font-weight: 300;
+            &::after { 
+                border: 0;
+                font-family: "bootstrap-icons";
+                font-weight: 900;
+                content: "\f282";
+                color: $primary-2;
+                font-size: 15px;
+                margin-left: calc(8px);
+                position: absolute;
+                right: 0;
+            }
+        }
+        .dropdown-menu { 
+            border-radius: 0;
+            border: none;
+            box-shadow: $box-shadow-large;
+            width: 100%;
+        }
+        .dropdown-item { 
+            color: $text-color;
+            font-weight: 300;
+            min-width: 100%;
+            &:focus, &:active { 
+                background-color: $primary-2;
+                color: white;
+            }
+        }
+    }
+}
+@media (min-width: $size-lg) {
+    .category-filter {
+        flex-direction: row; 
+        .filter-dropdown { 
+            width: auto;
+            .dropdown-toggle { 
+                min-width: 313px;
+            }
+            .dropdown-item { 
+                min-width: 313px;
+            }
+        }
+    }
+}
 .hotta-dropdown { 
     .dropdown-toggle { 
         border-radius: 0;
