@@ -6,7 +6,7 @@ body {
     margin: 0;
     font-family: $font-topic;
     line-height: 1;
-    color: #000;
+    color: #383838;
     text-align: left;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -704,6 +704,21 @@ textarea {
                 -webkit-box-orient: vertical;
                 overflow: hidden;
                 text-overflow: ellipsis;
+                text-align: center;
+            }
+        }
+        .blog-meta { 
+            display: flex;
+            justify-content: center;
+            .time { 
+                font-size: 25px;
+                color: #838383;
+                margin-right: $space;
+            }
+            .category { 
+                .category-item { 
+                    color: #838383;
+                }
             }
         }
         &:hover { 

@@ -130,6 +130,22 @@ var trendHeroCarousel = new Swiper(".swiper-blog-hero", {
     }
 });
 
+var relateBlogCarousel = new Swiper(".swiper-relate-content", {
+    slidesPerView: 1.1,
+    spaceBetween: 20,
+    centeredSlides: false,
+    allowTouchMove: true,
+    breakpoints: {
+        // Desktop
+        769: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+            centeredSlides: false,
+            allowTouchMove: false,
+        }
+    }
+});
+
 // Slick
 var igSlider = $('.slick-center').slick({
     centerMode: true,
@@ -225,3 +241,24 @@ var sticky = {
         document.documentElement.scrollTop = 0; 
     }
 }
+
+
+/* ------- Social Icons ------- */
+var url = window.location.href.split("?")[0];
+document
+    .querySelectorAll(".social-share-icon")
+    .forEach((e) => {
+        var socials = `
+          <a href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}" target="_blank">
+            <img src="./img/icon-facebook-white.svg" alt="icon-share-facebook" />
+          </a>
+          <a href="https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(url)}" target="_blank">
+            <img src="./img/icon-twitter-white.svg" alt="icon-share-line" />
+          </a>
+            <a href="https://twitter.com/share?url=${encodeURIComponent(url)}" target="_blank">
+            <img src="./img/icon-line-white.svg" alt="icon-share-twitter" />
+            </a>
+          `;
+        e.insertAdjacentHTML( 'beforeend', socials );
+    }
+);

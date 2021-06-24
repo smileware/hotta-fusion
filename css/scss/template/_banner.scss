@@ -309,7 +309,7 @@
 }
 
 .swiper-slide {
-    text-align: center;
+    // text-align: center;
     font-size: 18px;
     background: #fff;
     /* Center slide text vertically */
@@ -502,6 +502,9 @@
     }
     &.-trend { 
         background-image: url('../img/trend-bg.svg');
+    }
+    &.-news { 
+        background-image: url('../img/news-bg.svg');
     }
     .banner-brand { 
         img { 
