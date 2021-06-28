@@ -175,7 +175,8 @@ var productCarousel = new Swiper(".swiper-product", {
     slidesPerView: 1,
     centeredSlides: false,
     grabCursor: false,
-    loop: true,
+    simulateTouch: false,
+    loop: false,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
