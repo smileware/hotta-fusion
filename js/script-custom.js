@@ -51,6 +51,7 @@ document
     }
 );
 
+/* --- LOTTIE ANIMATION RENDER --- */
 /*------- Preloader ------*/
 $(window).on('load', function() {
     lottie.loadAnimation({
@@ -61,6 +62,30 @@ $(window).on('load', function() {
         path: `./img/animation/loading-logo.json`
     });
     $('.preloader').fadeOut('slow');
+    // Arrow-Down
+    lottie.loadAnimation({
+        container: document.getElementById("arrow-down"),
+        renderer: "svg",
+        loop: true,
+        autoplay: true,
+        path: `./img/animation/arrow-down.json`
+    });
+    // Arrow-To-Left
+    lottie.loadAnimation({
+        container: document.getElementById("arrow-left"),
+        renderer: "svg",
+        loop: true,
+        autoplay: true,
+        path: `./img/animation/arrow-right.json`
+    });
+    // Arrow-To-Right
+    lottie.loadAnimation({
+        container: document.getElementById("arrow-right"),
+        renderer: "svg",
+        loop: true,
+        autoplay: true,
+        path: `./img/animation/arrow-left.json`
+    });
 });
 
 /*------- Banner ------*/
@@ -146,6 +171,16 @@ var relateBlogCarousel = new Swiper(".swiper-relate-content", {
     }
 });
 
+var productCarousel = new Swiper(".swiper-product", {
+    slidesPerView: 1,
+    centeredSlides: false,
+    grabCursor: false,
+    loop: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    }
+});
 // Slick
 var igSlider = $('.slick-center').slick({
     centerMode: true,
