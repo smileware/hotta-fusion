@@ -212,6 +212,47 @@
         }
     }
 }
+
+.howto-drink-m { 
+    padding: 70px 30px;
+    &.-hot {
+        background-color: $primary-1;
+    }
+    &.-cold { 
+        background-color: $primary-2;
+    }
+    .drink-tab  {
+        .nav-tabs {
+            justify-content: space-between;
+            border: none;
+            a {
+                flex: 1;
+                margin: 0 $space;
+                border-radius: 0;
+                border: 1px solid white;
+                transform: skew(-20deg);
+                text-align: center;
+                span { 
+                    transform: skew(20deg);
+                    display: block;
+                    font-size: 30px;
+                    font-weight: bold;
+                    color: white;
+                }
+                &.active.-hot-tab { 
+                    span { 
+                        color: $primary-1;
+                    }
+                }
+                &.active.-cold-tab { 
+                    span { 
+                        color: $primary-2;
+                    }
+                }
+            }
+        }
+    }
+}
 @media (min-width: $size-lg) {
 
     .benefit { 
@@ -274,7 +315,6 @@
         }
     }
 }
-
 @media (min-width: $size-lg) {
     .page-complete { 
         background-size: 30%;
@@ -286,5 +326,96 @@
     .search-container  {
         max-width: 530px;
         margin: 0 auto;
+    }
+    .howto-drink-d {
+        padding-top: 70px ;
+        padding-bottom: 40px;
+        background-image: url('../img/bg-red-orange.svg');
+        background-position: bottom center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        .label { 
+            transform: skew(-20deg);
+            background-color: white;
+            padding: 8px $space; 
+            max-width: 190px;
+            margin: 0 auto $space;
+            text-align: center;
+            span { 
+                transform: skew(20deg);
+                font-size: 40px;
+                font-weight: bold;
+                display: block;
+
+            }
+        }
+        .hot { 
+            .label.-hot { 
+                span {
+                    color: $primary-1;
+                }
+            }
+        }
+        .cold { 
+            .label.-cold { 
+                span {
+                    color: $primary-2;
+                }
+            }
+        }
+        .step { 
+            text-align: center;
+            z-index: 1;
+            position: relative;
+            > div{ 
+                &:nth-child(1),&:nth-child(3)  {
+                   margin-top: 90px;
+                   position: relative;
+                }
+                &:nth-child(1) {
+                    &::after {
+                        content: url('../img/step-arrow-1.svg');
+                        width: 50px;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                    }
+                   
+                }
+                &:nth-child(3){ 
+                    &::after {
+                        content: url('../img/step-arrow-2.svg');
+                        width: 50px;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                    }
+                }
+            }
+            img { 
+                max-width: 180px;
+            }
+            .step-caption { 
+                font-size: 25px;
+                color: white;
+                display: block;
+                word-break: break-word;
+            }
+        }
+        .drink { 
+            margin-left: auto;
+            margin-right: auto;
+            img { 
+                display: block;
+                max-height:300px;
+                width: auto;
+                height: auto;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: -80px;
+                z-index: 0;
+            }
+        }
     }
 }

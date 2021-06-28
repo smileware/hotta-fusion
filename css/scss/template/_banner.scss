@@ -383,7 +383,20 @@
     padding-bottom: 50px;
 }
 
-
+.swiper-hot-drink,
+.swiper-cold-drink {
+    padding-top: $space-m;
+    padding-bottom: calc(#{$space-m} * 2);
+    .swiper-slide {
+        background-color: transparent;
+        flex-direction: column;
+        .caption { 
+            font-size: 25px;
+            font-weight: bold;
+            color: white;
+        }
+    }
+}
 // Slick Slider
 .slick-center { 
     padding-top: 10px;

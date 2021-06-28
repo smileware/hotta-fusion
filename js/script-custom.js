@@ -181,6 +181,29 @@ var productCarousel = new Swiper(".swiper-product", {
       prevEl: ".swiper-button-prev",
     }
 });
+
+
+var hotDrinkCarousel = new Swiper(".swiper-hot-drink", {
+    slidesPerView: 1,
+    loop: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    }
+});
+
+var coldDrinkCarousel = new Swiper(".swiper-cold-drink", {
+    slidesPerView: 1,
+    loop: true,
+    observer: true,
+    observeParents: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    }
+});
+
+
 // Slick
 var igSlider = $('.slick-center').slick({
     centerMode: true,
@@ -297,3 +320,16 @@ document
         e.insertAdjacentHTML( 'beforeend', socials );
     }
 );
+
+
+/* ------- Tabs ------- */
+$('.howto-drink--tab[data-toggle="tab"]').on('show.bs.tab', function (e) {
+    if(e.target.id == "nav-cold-tab") { 
+        console.log(e.target.id);
+        $("#product_howto_drink").removeClass('-hot');
+        $("#product_howto_drink").addClass('-cold');
+    }else { 
+        $("#product_howto_drink").removeClass('-cold');
+        $("#product_howto_drink").addClass('-hot');
+    }
+  })
