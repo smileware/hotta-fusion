@@ -1,19 +1,25 @@
 .about-us { 
+    overflow-x: hidden;
     .about-1 { 
         background-color: $primary-2;
         background-image: url('../img/about-section1.svg');
         background-repeat: no-repeat;
         background-position: center;
-        background-size: contain;
+        background-size: 90%;
         position: relative;
-        padding-top: 30px;
+        padding-top: 50px;
+        min-height: 520px;
+
         .hotta-story { 
             max-width: 300px;
             margin: 0 auto;
         }
         .hover-cup {
+            width: 420px;
             max-width: 420px;
-            margin-left: 100px;
+            position: absolute;
+            z-index: 2;
+            left: calc(50% - 158px);
         }
         .triangle-down { 
             left: 0;
@@ -44,7 +50,7 @@
             }
             h1 {
                 margin-bottom: 0;
-                line-height: 50px;
+                line-height: 60px;
             }
             h2 { 
                 margin-bottom: 0;
@@ -57,6 +63,34 @@
                 font-weight: normal;
             }
         }
+        .ingredient-top{ 
+            padding-top: 250px;
+            .-m { 
+                position: relative;
+                z-index: 1;
+            }
+        }
+        
+        .ingredient-down{ 
+            color: white;
+            padding-bottom: 200px;
+            text-align: center;
+            h1 {
+                margin-bottom: 0;
+                line-height: 50px;
+            }
+            h2 { 
+                margin-bottom: 0;
+                line-height: 40px;
+                font-weight: normal;
+            }
+            h4 { 
+                margin-top: $space;
+                line-height: 30px;
+                font-weight: normal;
+            }
+        }
+
         .ingredient-divider { 
             position: absolute;
             left: 0;
@@ -95,6 +129,13 @@
                 font-weight: normal;
             }
         }
+        .vitamin-right-bg { 
+            position: absolute;
+            width: auto;
+            right: 30px;
+            top: 40%;
+            opacity: 85%;
+        }
     }
     .model { 
         position: relative;
@@ -112,7 +153,7 @@
             justify-content: center;
             padding-top: 40px;
             h1 {
-                line-height: 30px;
+                line-height: 50px;
                 font-weight: bold;
                 color: $primary-1;
             }
@@ -128,5 +169,113 @@
                 font-weight: normal;
             }
         }
+    }
+    h1 {
+        text-align: center;
+    }
+    h2 { 
+        text-align: center;
+    }
+    h4 { 
+        text-align: center;
+    }
+}
+
+
+.ingredient-animate { 
+    position: absolute;
+    width: 80%;
+    max-width: 80%;
+    margin: auto;
+    position: absolute;
+    left: 12%;
+    top: 90px;
+}
+.ingredient-animate-m { 
+    position: absolute;
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    top: 150px;
+    z-index: 0;
+}
+.spin  {
+    position: absolute;
+    width: 255px;
+    left: calc(50% - 127.5px);
+    top: -100px;
+}
+.cup-mobile {
+    margin-left: 40px;
+}
+
+@media (min-width: $size-lg) { 
+    .about-us { 
+        h1 {
+            text-align: left;
+        }
+        h2 { 
+            text-align: left;
+        }
+        h4 { 
+            text-align: left;
+        }
+    }
+    .vitamin { 
+        .vitamin-right-bg { 
+            width: 45%;
+        }
+    }
+
+    .model { 
+        .model-left { 
+            h1 {
+                line-height: 30px;
+            }
+            h2 {
+                line-height: 30px;
+            }
+            h4 { 
+                line-height: 30px;
+            }
+        }
+    }
+}
+.scrolldown-d { 
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: 150px;
+    left: calc(50% - 38px);
+    z-index: 1;
+    span { 
+        font-size: 16px;
+        font-weight: bold;
+    }
+    i { 
+        font-size: 30px;
+    }
+}
+.scrolldown-m { 
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    bottom: -90px;
+    left: calc(50% - 38px);
+    z-index: 1;
+    span { 
+        font-size: 16px;
+        font-weight: bold;
+    }
+    i { 
+        font-size: 30px;
     }
 }

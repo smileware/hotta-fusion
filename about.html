@@ -297,18 +297,29 @@
                             <img src="./img/hotta-story.svg" alt="" class="w-100">
                         </div>
                     </div>
-                    <div class="col-12 text-center">
-                        <!-- <div id="trigger1" class="spacer s0"></div> -->
-                        <img src="./img/hotta-fusion-cup.png" alt="" class="w-100 hover-cup" id="pin1">
+                    <div id="trigger1" class="spacer s0"></div>
+                    <div class="col-12 text-center position-relative">
+                        <img src="./img/hotta-fusion-cup.png" alt="" class="w-100 _desktop hover-cup" id="pin1">
+                        <img src="./img/cup-shadow.png" alt="" class="w-100 _mobile cup-mobile">
                     </div>
                 </div>
                 <div class="triangle-down"><div></div></div>
             </div>
+            <div class="scrolldown-m _mobile">
+                <span>SCROLL DOWN</span>
+                <i class="bi bi-chevron-down"></i>
+            </div>
         </section>
         <!-- Ingredient -->
         <section class="ingredient">
+            <div class="scrolldown-d _desktop">
+                <span>SCROLL DOWN</span>
+                <i class="bi bi-chevron-down"></i>
+            </div>
+            <img src="./img/ingredient.png" class="ingredient-animate wow bounceInUp _desktop"  data-wow-offset="500"  alt="">
             <div class="container-fluid">
-                <div class="row">
+                <!-- DESKTOP -->
+                <div class="row _desktop">
                     <div class="col-4 p-5 ingredient-left">
                         <img src="./img/ginger.png" alt="" >
                         <h1>
@@ -335,6 +346,23 @@
                         </h4>
                     </div>
                 </div>
+                <div class="row _mobile">
+                    <div class="col-12 ingredient-top">
+                        <img src="./img/ingredient.png" class="wow fadeInUp ingredient-animate-m"  data-wow-offset="0"  alt="">
+                        <img src="./img/vitamin-m.png" alt="" class="w-100 -m" />
+                    </div>
+                    <div class="col-12 ingredient-down">
+                        <h1 class="">
+                            คัดสรรขิงที่ดีที่สุด
+                        </h1>
+                        <h2>
+                            เลือกส่วนผสมเพื่อรสชาติที่ลงตัว
+                        </h2>
+                        <h4>
+                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labor
+                        </h4>
+                    </div>
+                </div>
             </div>
             <div class="ingredient-divider">
                 <img src="./img/divider-triangle.svg" alt="" class="w-100">
@@ -344,11 +372,13 @@
         <section class="vitamin">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-4">
-                        <img src="img/Comp-1_1.gif" alt="" />
+                    <div class="col-12 col-lg-4 py-5">
+                        <img src="img/Comp-1_1.gif" alt="" class="w-100" />
                     </div>
-                    <div class="col-4"></div>
-                    <div class="col-4 vitamin-right">
+                    <div class="col-4 text-center position-relative _desktop">
+                        <img src="./img/spin.png" class="spin wow bounceInUp"  data-wow-offset="300"  alt="">
+                    </div>
+                    <div class="col-12 col-lg-4 py-5 vitamin-right">
                         <h1>
                             รสชาติสุดเซอร์ไพรส์
                         </h1>
@@ -359,6 +389,7 @@
                             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labor
                         </h4>
                     </div>
+                    <img src="./img/about-section1.svg" alt="" class="vitamin-right-bg" />
                 </div>
             </div>
             <div class="vitamin-divider">
@@ -372,19 +403,19 @@
             </div>
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-4 model-left">
+                    <div class="col-12 col-lg-4 model-left pl-3 pl-lg-5">
                         <h1>
                             เพื่อรสชาติสุดเซอร์ไพรส์
                         </h1>
                         <h2>
                             ดื่มอร่อยได้ประโยชน์
                         </h2>
-                        <h4>
+                        <h4 class="pt-3 pt-lg-0">
                             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labor
                         </h4>
                     </div>
-                    <div class="col-4"></div>
-                    <div class="col-4  model-right">
+                    <div class="col-12 col-lg-4 pt-5"></div>
+                    <div class="col-12 col-lg-4 model-right">
                         <img src="./img/model.png" class="w-100" alt="">
                     </div>
                 </div>
@@ -513,14 +544,18 @@
 <script src="js/script-custom.js"></script> 
 
 <script>
-    // var controller = new ScrollMagic.Controller();
-    // $(function () { // wait for document ready
-    //     // build scene
-    //     var scene = new ScrollMagic.Scene({triggerElement: "#trigger1", duration: 300})
-    //         .setPin("#pin1")
-    //         .addIndicators({name: "1 (duration: 300)"}) // add indicators (requires plugin)
-    //         .addTo(controller);
-    // });
+    var controller = new ScrollMagic.Controller();
+    $(function () { // wait for document ready
+				// build scene
+				var scene = new ScrollMagic.Scene({
+                    triggerElement: "#trigger1", 
+                    duration: 2050,
+                    offset: 200,
+                })
+				.setPin("#pin1")
+                // .addIndicators({name: "1 (duration: 300)"}) // add indicators (requi
+				.addTo(controller);
+			});
 </script>
 
 </html>
