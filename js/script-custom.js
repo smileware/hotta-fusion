@@ -97,7 +97,7 @@ var homepageBanner = new Swiper( ".swiper-homepage" , {
     }
 });
 var brandCarousel = new Swiper(".swiper-brand", {
-    spaceBetween: 5,
+    spaceBetween: 15,
     slidesPerView: 3,
     slidesPerColumn: 2,
     slidesPerColumnFill: "row",
@@ -221,8 +221,9 @@ var igSlider = $('.slick-center').slick({
         {
             breakpoint: 992,
             settings: {
-                centerMode: false,
                 slidesToShow: 1,
+                centerMode: true,
+                centerPadding: '30px',
                 dots: false,
                 arrows: false,
                 swipe: true,

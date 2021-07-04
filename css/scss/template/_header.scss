@@ -10,11 +10,12 @@
     transform: translateY(0);
     transition: $transition;
     border-bottom: $card-border;
+    position: fixed;
+    background-color: white;
     .home & {
         border-bottom: none;
     }
     z-index: 900;
-    position: absolute;
     left: 0;
     right: 0;
     top: 0;
@@ -147,23 +148,19 @@
             margin-bottom: $space;
         }
         a.nav-link {
-            font-weight: 900;
+            font-weight: normal;
             color: $primary-2;
             text-transform: uppercase; 
             transition: $transition;
-            font-size: 40px;
+            font-size: 39px;
             padding-left: 0;
             padding-right: 0;
             display: flex;
             align-items: center;
-
             .icon { 
                 width: 100%;
                 max-width: 25px;
                 margin-right: 10px;
-            }
-            &:hover { 
-                color: $primary-1;
             }
         }
         .sub-menu { 
@@ -201,6 +198,9 @@
     align-items: center;
     height: $nav-height-m;
     border-bottom: 1px solid #F6F6F6;
+    position: fixed;
+    top: 0;
+    z-index: 99;
 }
 .site-nav-m {
     position: fixed;

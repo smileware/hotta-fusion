@@ -920,26 +920,6 @@ select {
                 }
             }
         }
-        &:hover { 
-            .pic { 
-                &::before { 
-                    opacity: 1;
-                }
-                &::after { 
-                    opacity: 1;
-                }
-            }
-            .blog-link {
-                button { 
-                    &::before { 
-                        width: 100%;
-                    }
-                    .text { 
-                        color: white;
-                    }
-                }
-            }
-        }
     }
 }
 
@@ -968,6 +948,28 @@ select {
             .pic { 
                 height: 326px;
                 min-height: 326px;
+            }
+        }
+        &.-blog {
+            &:hover { 
+                .pic { 
+                    &::before { 
+                        opacity: 1;
+                    }
+                    &::after { 
+                        opacity: 1;
+                    }
+                }
+                .blog-link {
+                    button { 
+                        &::before { 
+                            width: 100%;
+                        }
+                        .text { 
+                            color: white;
+                        }
+                    }
+                }
             }
         }
     }
@@ -1047,12 +1049,45 @@ select {
     }
 }
 .hotta-dropdown { 
+    &.show { 
+        .dropdown-toggle { 
+            &::after { 
+                -webkit-transform: scaleY(-1);
+                transform: scaleY(-1);
+            }
+        }
+    }
+    &.-shop { 
+        .dropdown-menu { 
+            border-radius: 0;
+            border: 0;
+            min-width: 173px;
+            margin: 0;
+            box-shadow: $box-shadow-large;
+            background-color: #F6F6F6;
+        }
+        .dropdown-item { 
+            img { 
+                width: 30px;
+                margin-right: 6px;
+            }
+            padding: 6px 10px;
+            text-align: left;
+            color: $text-color;
+            font-weight: bold;
+            &:focus, &:active { 
+                background-color: $primary-2;
+                color: white;
+            }
+        }
+    }
     .dropdown-toggle { 
         border-radius: 0;
         border: 1px solid $primary-2;
         padding: 5px $space-m;
         color: $primary-2;
         font-weight: bold;
+        margin:0;
         &::after { 
             border: 0;
             font-family: "bootstrap-icons";
@@ -1060,15 +1095,19 @@ select {
             content: "\f282";
             font-size: 10px;
             margin-left: calc(8px);
+            transition: $transition;
         }
     }
     .dropdown-menu { 
         border-radius: 0;
         border: 1px solid $primary-2;
+        min-width: 91px;
+        margin: 0;
     }
     .dropdown-item { 
         color: $primary-2;
         font-weight: bold;
+        text-align: center;
         &:focus, &:active { 
             background-color: $primary-2;
             color: white;
@@ -1125,51 +1164,51 @@ select {
 }
 
 /*----- Animate -----*/
-@media (min-width: $size-lg) {
-    @keyframes fadeInUp {
-        from {
-            transform: translate3d(0,40px,0)
-        }
-        to {
-            transform: translate3d(0,0,0);
-            opacity: 1
-        }
-    }
-    @-webkit-keyframes fadeInUp {
-        from {
-            transform: translate3d(0,40px,0)
-        }
-        to {
-            transform: translate3d(0,0,0);
-            opacity: 1
-        }
-    }
+// @media (min-width: $size-lg) {
+//     @keyframes fadeInUp {
+//         from {
+//             transform: translate3d(0,40px,0)
+//         }
+//         to {
+//             transform: translate3d(0,0,0);
+//             opacity: 1
+//         }
+//     }
+//     @-webkit-keyframes fadeInUp {
+//         from {
+//             transform: translate3d(0,40px,0)
+//         }
+//         to {
+//             transform: translate3d(0,0,0);
+//             opacity: 1
+//         }
+//     }
     
-    .animated {
-        animation-duration: 1s;
-        animation-fill-mode: both;
-        -webkit-animation-duration: 1s;
-        -webkit-animation-fill-mode: both
-    }
-    .animatedFadeInUp {
-        opacity: 0
-    }
-    .fadeInUp {
-        opacity: 0;
-        animation-name: fadeInUp;
-        -webkit-animation-name: fadeInUp;
-    }
+//     .animated {
+//         animation-duration: 1s;
+//         animation-fill-mode: both;
+//         -webkit-animation-duration: 1s;
+//         -webkit-animation-fill-mode: both
+//     }
+//     .animatedFadeInUp {
+//         opacity: 0
+//     }
+//     .fadeInUp {
+//         opacity: 0;
+//         animation-name: fadeInUp;
+//         -webkit-animation-name: fadeInUp;
+//     }
 
-    .delay-1000ms { 
-        animation-delay: 1000ms;
-    }
-    .delay-1800ms { 
-        animation-delay: 1800ms;
-    }
-    .delay-2600ms { 
-        animation-delay: 2600ms;
-    }
-}
+//     .delay-1000ms { 
+//         animation-delay: 1000ms;
+//     }
+//     .delay-1800ms { 
+//         animation-delay: 1800ms;
+//     }
+//     .delay-2600ms { 
+//         animation-delay: 2600ms;
+//     }
+// }
 
 
 /* ----- Triangle -----*/

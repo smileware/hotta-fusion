@@ -1,5 +1,6 @@
 .site-footer { 
-   
+   position: relative;
+   z-index: 11;
     .footer-logo { 
         padding: 8px 20px;
         img { 

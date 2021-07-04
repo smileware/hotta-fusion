@@ -1,7 +1,7 @@
 .swiper-container {
     width: 100%;
     &.-main-banner { 
-        height: 640px;
+        height: auto;
     }
 }
 @media (min-width: $size-md) {
@@ -14,7 +14,11 @@
 @media (min-width: $size-lg) {
     .swiper-container {
         &.-main-banner { 
-            height: 640px;
+            min-height: auto;
+            img { 
+                min-height: auto;
+                margin-bottom: -1px;
+            }
         }
     }
 }
@@ -47,7 +51,7 @@
             .reason-img { 
                 position: relative;
                 .arrow-right { 
-                    width: auto;
+                    width: 75px;
                     position: absolute;
                     top: 50%;
                     right: -50px;
@@ -101,7 +105,7 @@
             .reason-img { 
                 position: relative;
                 .arrow-left { 
-                    width: auto;
+                    width: 75px;
                     position: absolute;
                     top: 50%;
                     left: -50px;
@@ -162,10 +166,25 @@
     height: 100%;
     padding-top: 12px;
     padding-bottom: 50px;
+    // @media (min-width: $size-lg) {
+    //     .brand-inner { 
+    //         width: 101px;
+    //         height: 101px;
+    //     }
+    // }
+
+    .swiper-wrapper { 
+        display: flex;
+    }
     .brand-inner { 
         background-color: white;
-        width: 101px;
-        height: 101px;
+        // width: 100%;
+        // height: 100%;
+        // width: 101px;
+        // height: 101px;
+        flex: 1 0 auto;
+        height: auto;
+        width: 100%;
         box-shadow: $box-shadow-large;
         display: flex;
         align-items: center;
@@ -176,7 +195,13 @@
             width: 100%;
             object-fit: unset;
         }
+        &:before {
+            content: '';
+            display: block;
+            padding-top: 100%;
+        }
     }
+
     .swiper-slide { 
         background-color: transparent;
         height: auto
@@ -401,23 +426,24 @@
 .slick-center { 
     padding-top: 10px;
     padding-bottom: 10px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 0px;
+    padding-right: 0px;
+    
     .slick-slide{
+        margin: 0 10px;
         width: 100%;
         height: auto;
         float: none;
         display: inline-block;
         vertical-align: middle;
         padding: 0px;
-        margin: 0px;
         background-color: white;
         transition: all 0.3s ease;
         text-align: center;
         cursor: pointer;
         img  {
-            max-width: 100%;
-            max-height: 100%;
+            width: 100%;
+            height: 100%;
         }
         &.slick-current,
         &.slick-center {
