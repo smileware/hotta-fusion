@@ -300,6 +300,14 @@ span{
     .modal-body { 
         padding: 0;
     }
+    @media (min-width: 992px) { 
+
+        .modal-dialog { 
+            max-width: 100%;
+            margin: 0;
+        }
+    }
+
 }
 
 /* ----- Input ----- */
@@ -711,8 +719,9 @@ select {
             z-index: 1;
             border-top: 5px solid $primary-1;
             padding: calc(#{$space} * 1.5) $space;
+            box-shadow: $box-shadow-large;
             .topic { 
-                font-size: 35px;
+                font-size: 30px;
                 font-weight: bold;
                 line-height: 30px;
                 display: -webkit-box;
@@ -765,31 +774,79 @@ select {
         border-radius: $card-border-radius;
         transition: $transition;
         background-color: transparent;
+        
         .pic { 
+            padding-bottom: 100%;
+            img, object, picture { 
+                position: absolute;
+                height: auto;
+                width: 100%;
+                top:      0;
+                left:     0;
+                bottom:   0;
+                right:    0;
+            }
+            &.bg-lightgreen { 
+                background-image: url('../img/lightgreen-square.svg');
+                background-repeat: no-repeat;
+                background-position: center bottom;
+                background-size: cover;
+            }
+            &.bg-green { 
+                background-image: url('../img/green-square.svg');
+                background-repeat: no-repeat;
+                background-position: center bottom;
+                background-size: cover;
+            }
+            &.bg-darkgreen { 
+                background-image: url('../img/darkgreen-square.svg');
+                background-repeat: no-repeat;
+                background-position: center bottom;
+                background-size: cover;
+            }
             margin: 0;
             border-radius: $card-border-radius $card-border-radius 0 0;
             overflow: hidden;
-            height: 160px;
-            min-height: 160px;
+            // height: 160px;
+            // min-height: 160px;
             position: relative;
             box-shadow: 6px 12px 20px rgba(0, 0, 0, .16);
             img { 
-                object-fit: cover;
-                object-position: center;
-                height: 100%;
-                width: 100%;
-                max-width: 100%;
+                // object-fit: cover;
+                // object-position: center;
+                // height: 100%;
+                // width: 100%;
+                // max-width: 100%;
                 border-radius: $card-border-radius $card-border-radius 0 0;
                 transition: $transition;
               
+            }
+            .product-cold { 
+                opacity: 1;
+                transition: $transition;
+            }
+            .product-hot { 
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                opacity: 0;
+                transition: $transition;
+            }
+            img { 
+                width: 100%;
+            }
+            .btn-viewmore-hover { 
+                opacity: 0;
+                display: none;
             }
         }
         .blog-content {
             padding: calc(#{$space} * 1.5) $space;
             .topic { 
-                font-size: 30px;
+                font-size: 25px;
                 font-weight: bold;
-                line-height: 30px;
+                line-height: 25px;
                 display: -webkit-box;
                 -webkit-line-clamp: 2;
                 -webkit-box-orient: vertical;
@@ -809,13 +866,6 @@ select {
                 text-overflow: ellipsis;
                 text-align: center;
                 color: #838383;
-            }
-        }
-        &:hover { 
-            .pic { 
-                img { 
-                    transform: scale(1.12);
-                }
             }
         }
     }
@@ -938,6 +988,7 @@ select {
                 padding: $space;
                 .topic { 
                     -webkit-line-clamp: 2;
+                    font-size: 35px;
                 }
                 .sub-topic { 
                     -webkit-line-clamp: 1;
@@ -946,8 +997,52 @@ select {
         }
         &.-lg {
             .pic { 
-                height: 326px;
-                min-height: 326px;
+                // height: 326px;
+                // min-height: 326px;
+                .btn-viewmore-hover { 
+                    height: 65px;
+                    width: 65px;
+                    border-radius: 50%;
+                    background-color: $primary-1;
+                    opacity: 0;
+                    position: absolute;
+                    top: 80%;
+                    left: 50%;
+                    -webkit-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%);
+                    display: flex;
+                    align-items: center;
+                    justify-self: center;
+                    flex-direction: column;
+                    color: white;
+                    padding-top: 5px;
+                    box-shadow: $box-shadow;
+                    transition: $transition;
+                    i { 
+                        font-size: 30px;
+                    }
+                    span { 
+                        font-size: 20px;
+                        line-height: 0.5;
+                    }
+                }
+            }
+            .blog-content {
+                .topic { 
+                    font-size: 30px;
+                }
+            }
+            &:hover { 
+                .btn-viewmore-hover { 
+                    top: 50%;
+                    opacity: 1;
+                }
+                .product-cold {
+                    opacity: 0;
+                }
+                .product-hot { 
+                    opacity: 1;
+                }
             }
         }
         &.-blog {
@@ -997,6 +1092,13 @@ select {
     }
     .filter-dropdown { 
         width: 100%;
+        &.show { 
+            .dropdown-toggle { 
+                &::after { 
+                    transform: scaleY(-1);
+                }
+            }
+        }
         .dropdown-toggle { 
             border-radius: 0;
             border-bottom: 1px solid #BEBEBE;
@@ -1027,6 +1129,8 @@ select {
             color: $text-color;
             font-weight: 300;
             min-width: 100%;
+            padding: 8px 10px;
+            font-size: 25px;
             &:focus, &:active { 
                 background-color: $primary-2;
                 color: white;

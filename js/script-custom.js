@@ -86,6 +86,14 @@ $(window).on('load', function() {
         autoplay: true,
         path: `./img/animation/arrow-left.json`
     });
+    // Vitamin
+    lottie.loadAnimation({
+        container: document.getElementById("vitamin"),
+        renderer: "svg",
+        loop: true,
+        autoplay: true,
+        path: `./img/animation/vitamins.json`
+    });
 });
 
 /*------- Banner ------*/
