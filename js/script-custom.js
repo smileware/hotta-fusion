@@ -96,6 +96,23 @@ $(window).on('load', function() {
     });
 });
 
+/* --- Modal --- */
+$('#siteVideo').on('shown.bs.modal', function () { 
+    if($("#siteVideo iframe").length) { 
+        $("#siteVideo iframe")[0].contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');
+    }else if( $("#siteVideo video").length ) { 
+        $('#siteVideo video').trigger('play');
+    }
+});
+
+$("#siteVideo").on('hidden.bs.modal', function (e) {
+    if($("#siteVideo iframe").length) {
+        $("#siteVideo iframe")[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
+    }else if( $("#siteVideo video").length ) { 
+        $('#siteVideo video').trigger('pause');
+    }
+});
+
 /*------- Banner ------*/
 // Desktop
 var homepageBanner = new Swiper( ".swiper-homepage" , {
