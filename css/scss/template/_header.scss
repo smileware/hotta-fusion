@@ -29,6 +29,7 @@
     .navbar-brand {
         padding: calc(#{$space} / 2);
         max-height: $nav-height-d;
+        height: $nav-height-d;
     }
 }
 .menu-toggle {

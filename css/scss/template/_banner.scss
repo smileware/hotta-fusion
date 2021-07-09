@@ -415,6 +415,11 @@
 }
 .swiper-blog-hero { 
     padding-bottom: 50px;
+    // margin-left: -15px;
+    // margin-right: -15px;
+    article.card.-hero {
+        padding: 0 15px;
+    }
 }
 .swiper-blog-hero-nav, .swiper-blog-hero-nav { 
     top: calc(50% - 75px);

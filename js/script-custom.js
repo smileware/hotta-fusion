@@ -166,7 +166,7 @@ var trendBlogCarousel = new Swiper(".swiper-trend-blog", {
 
 var trendHeroCarousel = new Swiper(".swiper-blog-hero", {
     slidesPerView: 1,
-    spaceBetween: 20,
+    spaceBetween: 0,
     centeredSlides: false,
     grabCursor: false,
     loop: false,
@@ -326,6 +326,18 @@ var sticky = {
         document.documentElement.scrollTop = 0; 
     }
 }
+var stickyOffset = isMobile() ? 268 : 90; // 268 Footer height when mobile, 90 when desktop
+window.addEventListener("scroll", function () {
+    var docHeight = $(document).height();
+	var currentPosition = $(window).height() + $(window).scrollTop();
+    var sticky = $("#stickyMenu");
+    if((docHeight - stickyOffset) <= currentPosition) {
+        sticky.css({ bottom: (stickyOffset - (docHeight - currentPosition)) + 30 + "px" });
+    }else { 
+        sticky.css({ bottom: "30px"});
+    }
+}, false);
+
 
 
 /* ------- Social Icons ------- */

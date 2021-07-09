@@ -1,33 +1,45 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="458" height="976" viewBox="0 0 458 976">
-  <defs>
-    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#b7c12e"/>
-      <stop offset="0.547" stop-color="#c9d53c"/>
-      <stop offset="0.655" stop-color="#747e00"/>
-      <stop offset="1" stop-color="#b7c12e"/>
-    </linearGradient>
-    <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#5a5a5a"/>
-      <stop offset="0.419" stop-color="#888" stop-opacity="0.718"/>
-      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="linear-gradient-2" x1="1.009" y1="0.842" x2="0" y2="0.166" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#ff4418"/>
-      <stop offset="1" stop-color="#ff9827"/>
-    </linearGradient>
-  </defs>
-  <g id="product-bg-FUSION_LIME" data-name="product-bg-FUSION LIME" transform="translate(-10014 -5665.047)">
-    <rect id="Rectangle_220" data-name="Rectangle 220" width="455" height="976" transform="translate(10015 5665.047)" fill="url(#linear-gradient)"/>
-    <ellipse id="Ellipse_55" data-name="Ellipse 55" cx="227.5" cy="32.5" rx="227.5" ry="32.5" transform="translate(10017 6287.047)" opacity="0.3" fill="url(#radial-gradient)" style="mix-blend-mode: multiply;isolation: isolate"/>
-    <g id="product-bg" transform="translate(10014 5739.572)">
-      <path id="Path_1358" data-name="Path 1358" d="M759.119,323.559,693.5,285.673V299.7l65.621,38.8Z" transform="translate(-303.119 -74.217)" fill="#ff8f1c"/>
-      <path id="Path_1359" data-name="Path 1359" d="M782.374,239.143V253.6l34.929,20.65.008-14.936Z" transform="translate(-426.052 -62.125)" fill="#fff"/>
-      <path id="Path_1361" data-name="Path 1361" d="M1215.334,526l-65.621-37.886v14.025l65.621,38.8Z" transform="translate(-1098.319 -127.878)" fill="#e56f14"/>
-      <path id="Path_1362" data-name="Path 1362" d="M1238.589,441.582v14.455l34.929,20.651.007-14.936Z" transform="translate(-1222.128 -115.796)" fill="#fff"/>
-      <path id="Path_1363" data-name="Path 1363" d="M1090.471,598.71l-65.622-37.886v14.025l65.622,38.8Z" transform="translate(-880.947 -146.792)" fill="#e56f14"/>
-      <path id="Path_1364" data-name="Path 1364" d="M1002.73,615.681l-195.4-114.537v49.229l195.4,115.887Z" transform="translate(-632.343 -130.944)" fill="#fff"/>
-      <path id="Path_1365" data-name="Path 1365" d="M1146.881,263.985,691.759,1.222V307.886l455.122,269.089Z" transform="translate(-690.882 -1.222)" fill="#ff8f1c"/>
-      <path id="Path_1366" data-name="Path 1366" d="M1146.4,493.141,690.572,229.555V366.765L1146.4,636.519Z" transform="translate(-690.572 -60.976)" fill="url(#linear-gradient-2)"/>
-    </g>
-  </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.3.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 455 976" style="enable-background:new 0 0 455 976;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#Rectangle_220_1_);}
+	.st1{opacity:0.3;fill:url(#Ellipse_55_1_);enable-background:new    ;}
+	.st2{fill:#FF8F1C;}
+	.st3{fill:#FFFFFF;}
+	.st4{fill:#E56F14;}
+	.st5{fill:url(#Path_1366_1_);}
+</style>
+<g id="product-bg-FUSION_LIME" transform="translate(-10014 -5665.047)">
+	
+		<linearGradient id="Rectangle_220_1_" gradientUnits="userSpaceOnUse" x1="9644.1865" y1="6453.2393" x2="9644.1865" y2="6452.2393" gradientTransform="matrix(455 0 0 -976 -4377863.5 6304027)">
+		<stop  offset="0" style="stop-color:#B7C12E"/>
+		<stop  offset="0.547" style="stop-color:#C9D53C"/>
+		<stop  offset="0.655" style="stop-color:#747E00"/>
+		<stop  offset="1" style="stop-color:#B7C12E"/>
+	</linearGradient>
+	<rect id="Rectangle_220" x="10013.9" y="5665" class="st0" width="455" height="976"/>
+	
+		<radialGradient id="Ellipse_55_1_" cx="9644.1865" cy="6455.439" r="0.5" gradientTransform="matrix(455 0 0 -65 -4377861.5 425923.0938)" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#5A5A5A"/>
+		<stop  offset="0.419" style="stop-color:#888888;stop-opacity:0.718"/>
+		<stop  offset="1" style="stop-color:#FFFFFF;stop-opacity:0"/>
+	</radialGradient>
+	<ellipse id="Ellipse_55" class="st1" cx="10243.4" cy="6319.5" rx="227.5" ry="32.5"/>
+	<g id="product-bg" transform="translate(10014 5739.572)">
+		<path id="Path_1358" class="st2" d="M454.9,249.3l-65.6-37.9v14l65.6,38.8L454.9,249.3z"/>
+		<path id="Path_1359" class="st3" d="M355.2,177v14.5l34.9,20.6l0-14.9L355.2,177z"/>
+		<path id="Path_1361" class="st4" d="M115.9,398.1l-65.6-37.9v14l65.6,38.8V398.1z"/>
+		<path id="Path_1362" class="st3" d="M15.3,325.8v14.5l34.9,20.7l0-14.9L15.3,325.8z"/>
+		<path id="Path_1363" class="st4" d="M208.4,451.9L142.8,414v14l65.6,38.8V451.9z"/>
+		<path id="Path_1364" class="st3" d="M369.3,484.7L173.9,370.2v49.2l195.4,115.9V484.7z"/>
+		<path id="Path_1365" class="st2" d="M454.9,262.8L-0.2,0v306.7l455.1,269.1V262.8z"/>
+		
+			<linearGradient id="Path_1366_1_" gradientUnits="userSpaceOnUse" x1="-369.3016" y1="713.101" x2="-370.3106" y2="713.777" gradientTransform="matrix(455.828 0 0 -406.964 168798.6094 290715.25)">
+			<stop  offset="0" style="stop-color:#FF4418"/>
+			<stop  offset="1" style="stop-color:#FF9827"/>
+		</linearGradient>
+		<path id="Path_1366" class="st5" d="M454.7,432.2L-1.1,168.6v137.2l455.8,269.8V432.2z"/>
+	</g>
+</g>
 </svg>
