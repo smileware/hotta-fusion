@@ -104,7 +104,9 @@ span{
     .max-line-lg-3 { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; }
     .max-line-lg-4 { display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; }
 }
-
+.line-height-40 {
+    line-height: 40px;
+}
 .line-height-30 { 
     line-height: 30px;
 }

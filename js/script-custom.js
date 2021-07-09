@@ -196,17 +196,17 @@ var relateBlogCarousel = new Swiper(".swiper-relate-content", {
     }
 });
 
-var productCarousel = new Swiper(".swiper-product", {
-    slidesPerView: 1,
-    centeredSlides: false,
-    grabCursor: false,
-    simulateTouch: false,
-    loop: false,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    }
-});
+// var productCarousel = new Swiper(".swiper-product", {
+//     slidesPerView: 1,
+//     centeredSlides: false,
+//     grabCursor: false,
+//     simulateTouch: false,
+//     loop: false,
+//     navigation: {
+//       nextEl: ".swiper-button-next",
+//       prevEl: ".swiper-button-prev",
+//     }
+// });
 
 
 var hotDrinkCarousel = new Swiper(".swiper-hot-drink", {
@@ -372,3 +372,19 @@ $('.howto-drink--tab[data-toggle="tab"]').on('show.bs.tab', function (e) {
         $("#product_howto_drink").addClass('-hot');
     }
   })
+
+
+
+/* ------- CheckBox Show/Hide Product Page ------- */
+$('input[type="radio"][name="product-size"]').on('click', function(e) {
+    $('.btn-checkout').each((idx, value) => {
+        
+        $(value).addClass('d-none');
+        var buttonValue = $(value).data("button-value");
+
+        if( buttonValue ==  e.target.value) {
+            console.log('sss');
+            $(value).removeClass('d-none');
+        }
+    });
+});
