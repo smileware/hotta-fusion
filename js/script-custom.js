@@ -338,7 +338,22 @@ window.addEventListener("scroll", function () {
     }
 }, false);
 
-
+/* -------  Sticky CUP ------- */
+if (document.querySelector('.about-us')) {
+    window.addEventListener("scroll", function () {
+        var docHeight = $(document).height();
+        var currentPosition = $(window).height() + $(window).scrollTop();
+        var screenHeight =  $(window).height();
+        var perfectHeight = 698; 
+        if(docHeight == currentPosition && screenHeight > 800) {
+            var marginTop =  (screenHeight - perfectHeight) - 90;
+            console.log(marginTop);
+            $('#pin1').css({marginTop: marginTop + "px"})
+        }else { 
+            $('#pin1').css({marginTop: "auto"})
+        }
+    }, false);
+}
 
 /* ------- Social Icons ------- */
 var url = window.location.href.split("?")[0];

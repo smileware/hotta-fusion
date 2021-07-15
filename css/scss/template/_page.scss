@@ -334,7 +334,7 @@
         background-position: bottom center;
         background-size: cover;
         background-repeat: no-repeat;
-
+        margin-bottom: -5px; // remove white spac
         .label { 
             transform: skew(-20deg);
             background-color: white;
