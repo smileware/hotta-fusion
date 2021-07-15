@@ -140,9 +140,11 @@
         width: 90%;
         left: 5%;
         top: 50px;
+        text-align: center;
         z-index: 2;
         img { 
             height: auto;
+            max-width: 380px;
             width: auto;
         }
     }

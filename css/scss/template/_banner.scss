@@ -135,7 +135,7 @@
         text-align: center;
         padding-bottom: calc(#{$space} * 4);
         background-color: transparent;
-        min-height: 800px;
+        min-height: 750px;
         padding-top: 200px;
         padding-bottom: 90px;
         padding-left: 30px;
@@ -184,6 +184,8 @@
         // height: 100%;
         // width: 101px;
         // height: 101px;
+        max-width: 130px;
+        max-height: 130px;
         flex: 1 0 auto;
         height: auto;
         width: 100%;
@@ -274,7 +276,8 @@
 @media (min-width: $size-md) {
     .swiper-feature-product { 
         .swiper-slide { 
-            min-height: 1200px;
+            // min-height: 1200px;
+            padding-bottom: 125px;
         }
     }
     .swiper-reason-mobile { 
@@ -291,7 +294,7 @@
 @media (min-width: $size-lg) {
     .swiper-feature-product { 
         .swiper-slide { 
-            min-height: 900px;
+            // min-height: 00px;
         }
     }
     .swiper-reason-mobile { 

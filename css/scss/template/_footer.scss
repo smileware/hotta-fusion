@@ -19,10 +19,19 @@
         .social-item { 
             img { 
                 filter: invert(30%) sepia(82%) saturate(2960%) hue-rotate(346deg) brightness(83%) contrast(107%);
+                transition: $transition; 
             }
             width: 40px;
             height: 40px;
             background-color: white;
+            transition: $transition; 
+            &:hover { 
+                background-color: $primary-1;
+                img {
+                    filter: brightness(0) invert(1);
+
+                }
+            } 
         }
     }
     .footer-link { 

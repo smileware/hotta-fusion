@@ -153,6 +153,9 @@ span{
     &.px-30 { 
         padding: 0 $space-m;
     }
+    &.max-1400 { 
+        max-width: 1400px !important;
+    }
 }
 .container-lg { 
     max-width: $size-lg;
