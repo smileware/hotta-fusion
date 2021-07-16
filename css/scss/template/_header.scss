@@ -224,7 +224,6 @@
         ul {
             padding: 0;
             margin: 0 -30px;
-            background-color: $primary-2;
             li.nav-item {
                 border-bottom: none;
                 padding: 0 12px;
@@ -236,7 +235,8 @@
                 }
                 a {
                     font-weight: 400;
-                    color: white;
+                    padding-top: 0;
+                    color: $text-color;
                 }
             }
 
@@ -276,7 +276,10 @@
             line-height: 1.5;
             width: 100%;
             border-bottom: 1px solid $nav-line;
-           
+            img  { 
+                max-width: 50px;
+                margin-right: 8px;
+            }
         }
     }
     svg {
@@ -332,11 +335,21 @@
             padding: 10px;
             z-index: 1;
             color: $primary-2;
-            opacity: 1;
+            &.bi-dash { 
+                opacity: 0;
+            }
+            &.bi-plus { 
+                opacity: 1;
+            }
         }
-        // &.active > svg {
-        //     transform: scaleX(-1);
-        // }
+        &.active > svg {
+            &.bi-dash { 
+                opacity: 1;
+            }
+            &.bi-plus { 
+                opacity: 0;
+            }
+        }
     }
     .menu > li {
         transform: scale(1.1) translateY(-2px);
