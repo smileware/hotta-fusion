@@ -613,6 +613,7 @@
                 .radio-toolbar {
                     display: flex;
                     flex: 1;
+                    flex-wrap: wrap;
                 }
                 .radio-toolbar input[type="radio"] {
                     opacity: 0;
@@ -628,6 +629,8 @@
                     background-color: rgba(255, 255, 255,.3);
                     margin-right: calc(#{$space} / 2);
                     margin-bottom: 0;
+                    margin-top: 5px;
+                    margin-bottom: 5px;
                     padding: 5px $space;
                     font-size: 20px;
                     font-weight: bold;
@@ -635,7 +638,8 @@
                     border-radius: 3px;
                     color: white;
                     text-align: center;
-                    width: 100%;
+                    // width: 100%;
+                    flex: 1 1 15px;
                 }
                 .radio-toolbar input[type="radio"]:focus + label {
                     background-color: white;
@@ -758,6 +762,7 @@
                     .radio-toolbar label {
                         padding: 5px 10px;
                         width: auto;
+                        flex: none;
                     }
                 }
                 .btn-checkout { 

@@ -113,6 +113,9 @@ span{
 .line-height-25 { 
     line-height: 25px;
 }
+.line-height-1 { 
+    line-height: 1;
+}
 /* ----- Border ----- */
 .border-rounded { 
     border-radius: 20px;
@@ -785,7 +788,7 @@ select {
                 position: absolute;
                 height: auto;
                 width: 100%;
-                top:      30px;
+                top:      10px;
                 left:     0;
                 bottom:   0;
                 right:    0;
@@ -1003,6 +1006,9 @@ select {
             .pic { 
                 // height: 326px;
                 // min-height: 326px;
+                img, object, picture { 
+                    top:      30px;
+                }
                 .btn-viewmore-hover { 
                     height: 65px;
                     width: 65px;
