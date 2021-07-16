@@ -132,6 +132,7 @@ var brandCarousel = new Swiper(".swiper-brand", {
     slidesPerColumn: 2,
     slidesPerColumnFill: "row",
     loop: false,
+    autoplay: true,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
