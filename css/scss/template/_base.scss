@@ -152,6 +152,9 @@ span{
     max-width: 100%;
     padding: 0 $space-m;
 }
+.max-1000 { 
+    max-width: 1000px !important;
+}
 .container-fluid { 
     &.px-30 { 
         padding: 0 $space-m;
