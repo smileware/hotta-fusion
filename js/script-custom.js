@@ -31,6 +31,11 @@ document.addEventListener(
             }
         }
         if (event.target.matches("#site-nav-m .nav-item-has-children > svg")) {
+            document.querySelectorAll('#site-nav-m .menu .nav-item-has-children').forEach((e) => {
+                if(e !== event.target.parentNode) { 
+                    e.classList.remove("active");
+                }
+            });
             if (event.target.parentNode.classList.contains("active")) {
                 event.target.parentNode.classList.remove("active");
             } else {
