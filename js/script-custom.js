@@ -397,14 +397,12 @@ $('.howto-drink--tab[data-toggle="tab"]').on('show.bs.tab', function (e) {
 
 /* ------- CheckBox Show/Hide Product Page ------- */
 $('input[type="radio"][name="product-size"]').on('click', function(e) {
-    $('.btn-checkout').each((idx, value) => {
-        
-        $(value).addClass('d-none');
-        var buttonValue = $(value).data("button-value");
+    $('.product-image-value').each((idx, value) => {
+        $(value).hide();
 
-        if( buttonValue ==  e.target.value) {
-            console.log('sss');
-            $(value).removeClass('d-none');
+        var imageValue = $(value).data("image-value");
+        if( imageValue ==  e.target.value) {
+            $(value).fadeIn(300) 
         }
     });
 });
