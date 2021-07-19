@@ -131,8 +131,10 @@ var brandCarousel = new Swiper(".swiper-brand", {
     slidesPerView: 3,
     slidesPerColumn: 2,
     slidesPerColumnFill: "row",
-    loop: false,
-    autoplay: true,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
@@ -144,6 +146,7 @@ var brandCarousel = new Swiper(".swiper-brand", {
             spaceBetween: 30,
             slidesPerColumn: 1,
             loop: true,
+            centeredSlides: true,
         }
     }
 });
