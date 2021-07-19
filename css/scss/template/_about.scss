@@ -191,11 +191,13 @@
 
 .ingredient-animate { 
     position: absolute;
-    width: 50%;
-    max-width: 50%;
+    max-width: 100%;
+    width: 720px;
+    // max-width: 50%;
     margin: auto;
     position: absolute;
-    left: 26%;
+    left: calc(50% - 350px);
+    // left: 26%;
     top: 120px;
 }
 .ingredient-animate-m { 
