@@ -149,7 +149,7 @@
             margin-bottom: $space;
         }
         a.nav-link {
-            font-weight: normal;
+            font-weight: 300;
             color: $primary-2;
             text-transform: uppercase; 
             transition: $transition;
@@ -162,6 +162,9 @@
                 width: 100%;
                 max-width: 25px;
                 margin-right: 10px;
+            }
+            &:hover { 
+                font-weight: 800;
             }
         }
         .sub-menu { 
