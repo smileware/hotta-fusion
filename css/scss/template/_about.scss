@@ -110,6 +110,12 @@
             width: 100%;
             height: 195px;
         }
+        @media (min-width: 1750px) { 
+            .vitamin-divider { 
+                bottom: -90px;
+                z-index: 0;
+            }
+        }
         .vitamin-right {
             display: flex;
             justify-content: center;
