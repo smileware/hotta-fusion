@@ -123,6 +123,14 @@
         width: 100%;
         max-width: 550px;
         margin: 30px auto;
+        .search-form { 
+            input { 
+                padding-left: $space;
+            }
+        }
+        .input-group-text { 
+            padding-left: $space;
+        }
     }
     .btn-close  { 
         position: absolute;

@@ -193,7 +193,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 8px;
+        padding: 0px;
         img { 
             height: auto;
             width: 100%;
@@ -513,6 +513,9 @@
         background: transparent;
         opacity: .7;
         transition: $transition;
+
+        padding: $space;
+        background-color: rgba( 0, 0,0, .5);
         &.slick-next-custom { 
             right: 25px;
             z-index: 1;

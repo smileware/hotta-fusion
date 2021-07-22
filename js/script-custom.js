@@ -121,6 +121,8 @@ $("#siteVideo").on('hidden.bs.modal', function (e) {
 /*------- Banner ------*/
 // Desktop
 var homepageBanner = new Swiper( ".swiper-homepage" , {
+    loop: true,
+    autoplay: true,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
