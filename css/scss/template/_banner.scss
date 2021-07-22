@@ -588,7 +588,7 @@
                 text-transform: uppercase;
             }
             .product-description { 
-                font-size: 25px;
+                font-size: 20px;
                 font-weight: 300;
                 letter-spacing: 1px;
                 // max-width: 420px;
@@ -701,7 +701,7 @@
         max-width: 1400px;
     }
     .row { 
-        min-height: 300px;
+        min-height: 250px;
     }
     &.-trend { 
         background-image: url('../img/trend-bg.svg');
@@ -746,6 +746,9 @@
 }
 @media (min-width: $size-lg) {
     .page-banner  {
+        .row { 
+            min-height: 300px;
+        }
         .page-title { 
             padding-left: 120px;
         }
@@ -766,6 +769,9 @@
                         width: auto;
                         flex: none;
                     }
+                }
+                .product-description { 
+                    font-size: 25px;
                 }
                 .btn-checkout { 
                     width: 312px;
