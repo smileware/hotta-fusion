@@ -66,7 +66,7 @@ $(window).on('load', function() {
         autoplay: true,
         path: `./img/animation/loading-logo.json`
     });
-    $('.preloader').fadeOut('slow');
+    $('.preloader').delay(2500).fadeOut('slow');
     // Arrow-Down
     lottie.loadAnimation({
         container: document.getElementById("arrow-down"),
