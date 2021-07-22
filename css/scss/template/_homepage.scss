@@ -151,6 +151,7 @@
         }
     }
     .product-container { 
+        margin-bottom: $space-m;
         .product-cold { 
             opacity: 1;
             transition: $transition;
@@ -242,6 +243,8 @@
 
 .find-fusion { 
     .find-fusion-1{
+        padding-top: 20px;
+        padding-bottom: 20px;
         position: relative;
         .brand-triangle-down { 
             position: absolute;
