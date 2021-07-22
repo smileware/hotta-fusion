@@ -48,6 +48,9 @@
             &:last-child { 
                border-right: none; 
             }
+            &:hover { 
+                color: $primary-2;
+            }
         }
     }
     .footer-copyright { 
