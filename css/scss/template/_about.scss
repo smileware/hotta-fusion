@@ -178,6 +178,8 @@
             }
         }
         .model-right{ 
+            display: flex;
+            align-items: flex-end;
             img { 
                 max-width: 400px;
             }
