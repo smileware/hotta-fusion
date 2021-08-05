@@ -36,6 +36,13 @@
 .swiper-reason-mobile { 
     overflow: hidden;
     padding-bottom: 100px;
+    >.container {
+        >.row { 
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+    } 
+    
     .swiper-slide { 
         height: 100%;
         width: 33.3333%;
