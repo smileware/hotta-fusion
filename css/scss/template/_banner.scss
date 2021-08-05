@@ -142,19 +142,19 @@
         padding-right: 30px;
     }
     .-left { 
-        background-image: url('../img/product-bg-green1.svg');
+        background-image: url('../img/product-bg-green1.png');
         background-position: top center;
         background-size: cover;
         background-repeat: no-repeat;
     }
     .-center {
-        background-image: url('../img/product-bg-green2.svg');
+        background-image: url('../img/product-bg-green2.png');
         background-position: top center;
         background-size: cover;
         background-repeat: no-repeat;
     }
     .-right { 
-        background-image: url('../img/product-bg-green3.svg');
+        background-image: url('../img/product-bg-green3.png');
         background-position: top center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -661,8 +661,11 @@
                 letter-spacing: 1px;
                 border-radius: 0;
                 transition: $transition;
+                border: 1px solid transparent;
                 &:hover { 
-                    background-color: #EDEDED;
+                    background-color: $primary-1;
+                    border: 1px solid white;
+                    color: white;
                 }
             }
         }
