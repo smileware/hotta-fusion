@@ -319,6 +319,30 @@
         }
     }
 }
+.search-container { 
+    .search-form {
+        .input-group { 
+            border-bottom: 1px solid #B9B9B9;
+            .input-group-text { 
+                border-bottom: none;
+            }
+        }
+        display: flex;
+        flex-direction: column;
+        label {
+            flex: 1;
+            margin-bottom: $space;
+            margin-right: 0;
+            height: 100%;
+        }
+        input { 
+            margin-right: calc(#{$space} * 1.2);
+            border-bottom: none;
+            padding-right: 0;
+            padding-left: $space;
+        }
+    }
+}
 @media (min-width: $size-lg) {
     .page-complete { 
         background-size: 30%;

@@ -163,6 +163,7 @@ var brandCarousel = new Swiper(".swiper-brand", {
             slidesPerView: 6,
             spaceBetween: 30,
             slidesPerColumn: 1,
+            slidesPerGroup: 5,
             loop: true,
             centeredSlides: true,
         }

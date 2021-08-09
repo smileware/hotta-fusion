@@ -534,3 +534,23 @@
         }
     }
 }
+
+
+@media screen and (max-width: 1302px) { 
+    .hotta-dropdown { 
+        .dropdown-toggle { 
+            padding: 5px 10px;
+        }
+    }
+}
+@media screen and (max-width: 1110px) { 
+    .site-nav-d { 
+        .social { 
+            .social-item { 
+                margin: 0 3px;
+                width: 23px;
+                height: 23px;
+            }
+        }
+    }
+}
