@@ -1494,3 +1494,37 @@ select {
         color: #838383;
     }
 }
+
+
+@media (min-width: $size-lg) {
+    .accordion { 
+        .accordion-toggle { 
+            position: relative;
+            .title { 
+                padding-right: 85px;
+                &::after { 
+                    right: 20px;
+                }
+            }
+            &:hover { 
+                &::before { 
+                    background-color: $primary-1;
+                }
+                .title { 
+                    &::after { 
+                        color: white;
+                    }
+                }
+            }
+            &::before { 
+                content: "";
+                background-color: white;
+                position: absolute;
+                right: 0;
+                height: 100%;
+                width: 65px;
+                transition: $transition;
+            }
+        }
+    }
+}

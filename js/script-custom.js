@@ -138,7 +138,10 @@ $("#siteVideo").on('hidden.bs.modal', function (e) {
 // Desktop
 var homepageBanner = new Swiper( ".swiper-homepage" , {
     loop: true,
-    autoplay: true,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
@@ -164,11 +167,12 @@ var brandCarousel = new Swiper(".swiper-brand", {
             spaceBetween: 30,
             slidesPerColumn: 1,
             slidesPerGroup: 5,
-            loop: true,
-            centeredSlides: true,
+            centeredSlides: false,
+            // loop: true,
         }
     }
 });
+
 var trendBlogCarousel = new Swiper(".swiper-trend-blog", {
     slidesPerView: 1,
     spaceBetween: 20,
