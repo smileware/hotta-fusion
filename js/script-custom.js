@@ -61,6 +61,17 @@ document.addEventListener(
     },
     false
 );
+
+/* -------  Add Trigger to Search Icon ------- */
+// document
+//     .querySelectorAll(".search-icon-trigger")
+//     .forEach((e) => {
+//         e.addEventListener(
+//         "click", function() { 
+//             $(e).closest('.search-form').submit();
+//         });
+//     }
+// );
 /* -------  Mobile Menu:: Add Icon Dropdown Toggle ------- */
 document
     .querySelectorAll("#site-nav-m .nav-item-has-children")
