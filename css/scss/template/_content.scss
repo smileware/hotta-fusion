@@ -1,6 +1,8 @@
 
 .entry-content { 
     padding: calc(#{$space} * 2) 0;
+    font-family: $font-read;
+    font-size: $font-size-p;
     p {
         color: $text-color;
         line-height: 32px;
@@ -9,6 +11,10 @@
         display: block;
         margin: calc(#{$space} * 2) auto;
         max-width: 800px;
+    }
+    a { 
+        color: $primary-2;
+        text-decoration: underline;
     }
 }
 .share-container { 

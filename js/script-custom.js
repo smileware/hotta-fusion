@@ -62,16 +62,6 @@ document.addEventListener(
     false
 );
 
-/* -------  Add Trigger to Search Icon ------- */
-// document
-//     .querySelectorAll(".search-icon-trigger")
-//     .forEach((e) => {
-//         e.addEventListener(
-//         "click", function() { 
-//             $(e).closest('.search-form').submit();
-//         });
-//     }
-// );
 /* -------  Mobile Menu:: Add Icon Dropdown Toggle ------- */
 document
     .querySelectorAll("#site-nav-m .nav-item-has-children")
@@ -150,7 +140,7 @@ $("#siteVideo").on('hidden.bs.modal', function (e) {
 var homepageBanner = new Swiper( ".swiper-homepage" , {
     loop: true,
     autoplay: {
-        delay: 2500,
+        delay: 6000,
         disableOnInteraction: false,
     },
     pagination: {
@@ -177,7 +167,7 @@ var brandCarousel = new Swiper(".swiper-brand", {
             slidesPerView: 6,
             spaceBetween: 30,
             slidesPerColumn: 1,
-            slidesPerGroup: 5,
+            slidesPerGroup: 3,
             centeredSlides: false,
             // loop: true,
         }
@@ -314,6 +304,24 @@ $('.slick-center').on('afterChange', function(event, slick, currentSlide, nextSl
     showIgCaption($('.slick-current').data('caption'));
 });
 
+$('.slick-center').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+    // $('.-youtube').find("iframe")[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*'); // pause
+    // $('.-youtube').find('.youtube-thumbnail').css('display', 'block');
+    // $('.-youtube').find('iframe').css('display', 'none');
+    // console.log('conchang');
+    // var isCurrent = $('.-youtube').parent('.slick-current').length;
+    // if(isCurrent) { 
+    //     var isPlaying = $('.-youtube').hasClass('-playing');
+    //     $('.-youtube').toggleClass('-playing');
+    //     if(isPlaying) { 
+    //         $('.-youtube').find('.youtube-thumbnail').css('display', 'block');
+    //         $('.-youtube').find('iframe').css('display', 'none');
+    //         $('.-youtube').find('iframe')[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*'); // pause
+    //     }
+    // }
+    console.log(youtubeState);
+});
+
 // Run Initial Caption.
 showIgCaption($('.slick-current').data('caption'));
 function showIgCaption(caption) { 
@@ -329,6 +337,25 @@ $('.-video').click(function(){
             $(this).find('.video-ig').trigger('play'); // play
         }else {
             $(this).find('.video-ig').trigger('pause'); // pause
+        }
+    }
+});
+var youtubeState = "";
+$('.-youtube').click(function(){ 
+    var isCurrent = $(this).parent('.slick-current').length;
+    if(isCurrent) { 
+        var isPlaying = $(this).hasClass('-playing');
+        $(this).toggleClass('-playing');
+        if(!isPlaying) { 
+            $(this).find('.youtube-thumbnail').css('display', 'none');
+            $(this).find('iframe').css('display', 'block');
+            $(this).find('iframe')[0].contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*'); // play
+            youtubeState = 'playVideo';
+        }else {
+            $(this).find('.youtube-thumbnail').css('display', 'block');
+            $(this).find('iframe').css('display', 'none');
+            $(this).find('iframe')[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*'); // pause
+            youtubeState = 'pauseVideo';
         }
     }
 });
