@@ -438,7 +438,7 @@
                 </div>
             </div>
         </section>
-
+        <div class="spacer s2"></div>
     </main>
     <!-- End:: Content -->
     <!-- Start:: Footer -->
@@ -569,21 +569,30 @@
 <script>
     window.addEventListener("load", function () {
         var docHeight = $(document).height();
+        var windowHeight = $(window).height();
         var controller = new ScrollMagic.Controller();
-
         $(function () { 
-            var screenHeight =  $(window).height();
-            var duration = docHeight - (390 + 90);
-            console.log(duration);
+            var scrollTop     = $(window).scrollTop(),
+                elementOffset = $('#trigger1').offset().top,
+                distance      = (elementOffset - scrollTop);
+
+            var screenHeight =  $(window).height() - distance;
+            var offsetValue = 0;
+            // alert(windowHeight)
+            if(windowHeight < 726) { 
+                offsetValue = 90;
+            }
+            // var duration = docHeight - distance - 90;
+            var trigger1 = $("#trigger1");
             var scene = new ScrollMagic.Scene({
-                // triggerElement: "#trigger1", 
-                duration: duration,
-                // offset: 00
+                duration: 0,
+                offset: offsetValue,
             })
+            .setClassToggle('#pin1', 'bottom90')
             .setPin("#pin1")
             // .addIndicators({name: "1 (duration: 300)"}) // add indicators (requi
             .addTo(controller);
-            console.log(scene.offset())
+            // console.log(scene.offset())
         });
     });
     

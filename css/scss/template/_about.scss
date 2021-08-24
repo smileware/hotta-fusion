@@ -17,11 +17,13 @@
         .hover-cup {
             width: 390px;
             max-width: 390px;
-            position: absolute;
+            position: fixed;
             z-index: 2;
             left: calc(50% - 188px);
-            // transform: translateY( 0,  calc(50% - 188px));
-            top: 0;
+            // top: 0;
+        }
+        .bottom90 { 
+            bottom: 90px;
         }
         .triangle-down { 
             left: 0;

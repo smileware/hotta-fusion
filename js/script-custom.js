@@ -304,24 +304,6 @@ $('.slick-center').on('afterChange', function(event, slick, currentSlide, nextSl
     showIgCaption($('.slick-current').data('caption'));
 });
 
-$('.slick-center').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-    // $('.-youtube').find("iframe")[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*'); // pause
-    // $('.-youtube').find('.youtube-thumbnail').css('display', 'block');
-    // $('.-youtube').find('iframe').css('display', 'none');
-    // console.log('conchang');
-    // var isCurrent = $('.-youtube').parent('.slick-current').length;
-    // if(isCurrent) { 
-    //     var isPlaying = $('.-youtube').hasClass('-playing');
-    //     $('.-youtube').toggleClass('-playing');
-    //     if(isPlaying) { 
-    //         $('.-youtube').find('.youtube-thumbnail').css('display', 'block');
-    //         $('.-youtube').find('iframe').css('display', 'none');
-    //         $('.-youtube').find('iframe')[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*'); // pause
-    //     }
-    // }
-    console.log(youtubeState);
-});
-
 // Run Initial Caption.
 showIgCaption($('.slick-current').data('caption'));
 function showIgCaption(caption) { 
