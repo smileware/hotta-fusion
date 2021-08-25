@@ -85,20 +85,20 @@ $(window).on('load', function() {
     });
     $('.preloader').delay(2500).fadeOut('slow');
     // Arrow-Down
-    lottie.loadAnimation({
-        container: document.getElementById("arrow-down"),
-        renderer: "svg",
-        loop: true,
-        autoplay: true,
-        path: `./img/animation/arrow-down.json`
-    });
+    // lottie.loadAnimation({
+    //     container: document.getElementById("arrow-down"),
+    //     renderer: "svg",
+    //     loop: true,
+    //     autoplay: true,
+    //     path: `./img/animation/arrow-down.json`
+    // });
     // Arrow-To-Left
     lottie.loadAnimation({
         container: document.getElementById("arrow-left"),
         renderer: "svg",
         loop: true,
         autoplay: true,
-        path: `./img/animation/arrow-right.json`
+        path: `./img/animation/right.json`
     });
     // Arrow-To-Right
     lottie.loadAnimation({
@@ -106,7 +106,7 @@ $(window).on('load', function() {
         renderer: "svg",
         loop: true,
         autoplay: true,
-        path: `./img/animation/arrow-left.json`
+        path: `./img/animation/left.json`
     });
     // Vitamin
     lottie.loadAnimation({
@@ -114,7 +114,7 @@ $(window).on('load', function() {
         renderer: "svg",
         loop: true,
         autoplay: true,
-        path: `./img/animation/vitamins.json`
+        path: `./img/animation/Vitamins.json`
     });
 });
 
@@ -134,6 +134,48 @@ $("#siteVideo").on('hidden.bs.modal', function (e) {
         $('#siteVideo video').trigger('pause');
     }
 });
+
+/*------- Sound ------*/
+var isPlaying = false;
+document
+    .querySelectorAll(".menu-audio")
+    .forEach((e) => {
+        e.addEventListener(
+        "click", function() { 
+            var myAudio = e.querySelector("audio");
+            isPlaying ? myAudio.pause() : myAudio.play();
+            myAudio.onplaying = function() {
+                isPlaying = true;
+                e.querySelector(".audio-status").innerHTML = "ON";
+                e.querySelector(".audio-icon img").src = "./img/audio-on.svg";
+            };
+            myAudio.onpause = function() {
+                isPlaying = false;
+                e.querySelector(".audio-status").innerHTML = "OFF";
+                e.querySelector(".audio-icon img").src = "./img/audio-off.svg";
+            };
+        });
+    }
+);
+
+
+// var myAudio = document.getElementById("myAudio");
+
+
+// function togglePlay() {
+//   isPlaying ? myAudio.pause() : myAudio.play();
+// };
+
+// myAudio.onplaying = function() {
+//   isPlaying = true;
+//   $("#sound_status").html('ON');
+//   $("#sound_icon").attr("src","./img/audio-on.svg");
+// };
+// myAudio.onpause = function() {
+//   isPlaying = false;
+//   $("#sound_status").html('OFF');
+//   $("#sound_icon").attr("src","./img/audio-off.svg");
+// };
 
 /*------- Banner ------*/
 // Desktop

@@ -31,6 +31,22 @@
         max-height: $nav-height-d;
         height: $nav-height-d;
     }
+    .menu-audio { 
+        position: absolute;
+        top: calc((90px - 24px) / 2);
+        left: 90px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        .audio-icon { 
+            margin-right: $space;
+        }
+        .audio-text, .audio-status { 
+            font-size: 30px;
+            font-weight: 900;
+            color: $primary-2;
+        }
+    }
 }
 .menu-toggle {
     position: absolute;
@@ -197,7 +213,17 @@
 }
 
 .navbar-m { 
-
+    .menu-audio { 
+        position: absolute;
+        right: 60px;
+        cursor: pointer;
+        width: 25px;
+        display: flex;
+        align-items: center;
+        .audio-text, .audio-status { 
+            display: none;
+        }
+    }
     .show-nav & {
         z-index: 999;
         position: fixed;

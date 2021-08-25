@@ -81,7 +81,7 @@
             .arrow-down { 
                 position: absolute;
                 bottom: -50px;
-                width: 50px;
+                // width: 50px;
             }
             .arrow-circle { 
                 position: absolute;
@@ -312,7 +312,7 @@
                     width: calc(100% - 80px);
                 }
                 img { 
-                    max-width: 80%;
+                    max-width: 70%;
                 }
             }
             &.-center { 
@@ -345,7 +345,7 @@
                     width: calc(100% - 80px);
                 }
                 img { 
-                    max-width: 80%;
+                    max-width: 70%;
                 }
             }
         }
