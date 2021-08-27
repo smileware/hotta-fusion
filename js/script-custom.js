@@ -92,6 +92,14 @@ $(window).on('load', function() {
     //     autoplay: true,
     //     path: `./img/animation/arrow-down.json`
     // });
+    // Shake
+    lottie.loadAnimation({
+        container: document.getElementById("shake"),
+        renderer: "svg",
+        loop: true,
+        autoplay: true,
+        path: `./img/animation/shake.json`
+    });
     // Arrow-To-Left
     lottie.loadAnimation({
         container: document.getElementById("arrow-left"),
