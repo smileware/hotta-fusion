@@ -122,7 +122,7 @@ $(window).on('load', function() {
         renderer: "svg",
         loop: true,
         autoplay: true,
-        path: `./img/animation/Vitamins.json`
+        path: `./img/animation/vitamins-new.json`
     });
 });
 
