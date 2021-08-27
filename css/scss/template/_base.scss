@@ -1135,15 +1135,19 @@ select {
             color: $text-color;
             font-weight: 300;
             &::after { 
-                border: 0;
-                font-family: "bootstrap-icons";
-                font-weight: 900;
-                content: "\f282";
-                color: $primary-2;
-                font-size: 15px;
-                margin-left: calc(8px);
-                position: absolute;
-                right: 0;
+                // border: 0;
+                // font-family: "bootstrap-icons";
+                // font-weight: 900;
+                // content: "\f282";
+                // color: $primary-2;
+                // font-size: 15px;
+                // margin-left: calc(8px);
+                // position: absolute;
+                // right: 0;
+                // top: 10px
+            }
+            &::after { 
+                display: none;
             }
         }
         .dropdown-menu { 
@@ -1570,4 +1574,63 @@ select {
     40%, 60% {
         transform: translate3d(4px, 0, 0);
     }
+}
+
+.custom-dropdown {
+    position: relative;
+    cursor: pointer;
+}
+.custom-dropdown select {
+    display: none !important; /*hide original SELECT element: */
+}
+.select-selected::after { 
+    border: 0;
+    font-family: "bootstrap-icons";
+    font-weight: 900;
+    content: "\f282";
+    color: $primary-2;
+    font-size: 15px;
+    margin-left: calc(8px);
+    position: absolute;
+    right: 0;
+    top: 10px
+}
+.select-selected.select-arrow-active:after {
+    transform: scaleY(-1);
+} 
+.select-items {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    border-radius: 0;
+    border: none;
+    box-shadow: $box-shadow-large;
+    width: 100%;
+    background-color: white;
+    padding: 0.5rem 0;
+    margin: 0.125rem 0 0;
+    > div { 
+        color: #383838;
+        font-weight: 300;
+        min-width: 100%;
+        padding: 8px 10px;
+        font-size: 25px;
+        cursor: pointer;
+        &:hover { 
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+        &:focus, &:active { 
+            background-color: $primary-2;
+            color: white;
+        }
+    }
+    .same-as-selected { 
+        // display: none;
+    }
+}
+/* Hide the items when the select box is closed: */
+.select-hide {
+    display: none;
 }
