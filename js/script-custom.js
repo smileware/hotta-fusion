@@ -152,7 +152,7 @@ document
             myAudio.onpause = function() {
                 isPlaying = false;
                 e.querySelector(".audio-status").innerHTML = "OFF";
-                e.querySelector(".audio-icon img").src = "./img/audio-off.svg";
+                e.querySelector(".audio-icon img").src = "../img/audio-off.svg";
             };
         });
     }
@@ -174,7 +174,7 @@ document
 // myAudio.onpause = function() {
 //   isPlaying = false;
 //   $("#sound_status").html('OFF');
-//   $("#sound_icon").attr("src","./img/audio-off.svg");
+//   $("#sound_icon").attr("src","../img/audio-off.svg");
 // };
 
 /*------- Banner ------*/
