@@ -8,7 +8,7 @@
         }
     }
     .footer-headline { 
-       padding-right: 20px;
+       padding-right: 10px;
        padding-left: 10px;
        &._mobile { 
            >h4 { 
@@ -20,7 +20,7 @@
         background-color: $primary-1;
     }
     .social {
-        
+        min-width: 200px;
         .social-item { 
             img { 
                 filter: invert(30%) sepia(82%) saturate(2960%) hue-rotate(346deg) brightness(83%) contrast(107%);

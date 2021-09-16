@@ -173,6 +173,12 @@
     .pagination-feature { 
         bottom: 120px;
     }
+    .product-title { 
+        h1, h2 { 
+            line-height: .8em;
+            word-break: break-word;
+        }
+    }
 }
 .swiper-brand { 
     align-items: center;
