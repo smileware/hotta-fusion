@@ -521,11 +521,14 @@ for (i = 0; i < l; i++) {
     /* For each element, create a new DIV that will contain the option list: */
     b = document.createElement("DIV");
     b.setAttribute("class", "select-items select-hide");
-
     // 
     // for first option
+    // d = document.createElement("DIV");
+    // d.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
     d = document.createElement("DIV");
-    d.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+    d.innerHTML = selElmnt.options[0].innerHTML;
+
+    d.setAttribute("data-value", selElmnt.options[0].value);
     d.addEventListener("click", function(e) {
         /* When an item is clicked, update the original select box,
         and the selected item: */
@@ -548,7 +551,6 @@ for (i = 0; i < l; i++) {
         }
         h.click();
     });
-    console.log(d);
     b.appendChild(d);
     // 
 
@@ -557,6 +559,7 @@ for (i = 0; i < l; i++) {
     create a new DIV that will act as an option item: */
     c = document.createElement("DIV");
     c.innerHTML = selElmnt.options[j].innerHTML;
+    c.setAttribute("data-value", selElmnt[j].value)
     c.addEventListener("click", function(e) {
         /* When an item is clicked, update the original select box,
         and the selected item: */

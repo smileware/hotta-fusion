@@ -436,10 +436,10 @@
                         </label>
                         <div class="filter-dropdown">
                             <div class="dropdown-toggle custom-dropdown">
-                                <select name="" id="" class="">
-                                    <option value="">NEWS</option>
-                                    <option value="">VIDEO</option>
-                                    <option value="">ACTIVITY</option>
+                                <select name="dropdown-category" id="" class="">
+                                    <option value="12">NEWS</option>
+                                    <option value="123">VIDEO</option>
+                                    <option value="1234">ACTIVITY</option>
                                 </select>
                             </div>
                         </div>
@@ -794,5 +794,25 @@
 <script src="js/vendor/slick.min.js"></script> 
 <!-- Javascript Custom --> 
 <script src="js/script-custom.js"></script> 
+
+
+<script>
+    var custom_dropdown = document.querySelectorAll('.custom-dropdown');
+        custom_dropdown.forEach((e) => { 
+            var options = e.querySelectorAll('.select-items div');
+                options.forEach((k) => { 
+                    k.addEventListener('click', () => {
+                        var option_value = k.dataset.value // This is value inside <option>.
+                        // DO STUFF;
+                        /* For instance. 
+                         if (option_value) { 
+                            window.location = option_value; // redirect
+                        }
+                        return false;
+                        */
+                    });
+                });
+        });
+</script>
 
 </html>
