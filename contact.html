@@ -407,13 +407,23 @@
                                 <input type="text" placeholder="ชื่อ - นามสกุล" />
                                 <input type="text" placeholder="อีเมล" />
                             </div>
-                            <div class="grid -d1">
-                                <select name="" id="">
+                            <div class="grid -d1 category-filter -contactpage">
+                                <div class="filter-dropdown">
+                                    <div class="dropdown-toggle custom-dropdown">
+                                        <select name="" id="" class="">
+                                            <option value="">เรื่องที่ต้องการติดต่อ *</option>
+                                            <option value="สอบถามข้อมูลทั่วไป">สอบถามข้อมูลทั่วไป</option>
+                                            <option value="สอบถามข้อมูลผลิตภัณฑ์">สอบถามข้อมูลผลิตภัณฑ์</option>
+                                            <option value="สอบถามข้อมูลกิจกรรมทางการตลาด">สอบถามข้อมูลกิจกรรมทางการตลาด</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <!-- <select name="" id="">
                                     <option value="">เรื่องที่ต้องการติดต่อ *</option>
                                     <option value="">สอบถามข้อมูลทั่วไป</option>
                                     <option value="">สอบถามข้อมูลผลิตภัณฑ์</option>
                                     <option value="">สอบถามข้อมูลกิจกรรมทางการตลาด</option>
-                                </select>
+                                </select> -->
                             </div>
                             <div class="grid -d1">
                                 <textarea name="" id="" cols="30" rows="5" placeholder="ข้อความ"></textarea>
@@ -555,4 +565,21 @@
 <!-- Javascript Custom --> 
 <script src="js/script-custom.js"></script> 
 
+<script>
+    var custom_dropdown = document.querySelectorAll('.custom-dropdown');
+        custom_dropdown.forEach((e) => { 
+            var options = e.querySelectorAll('.select-items div');
+                options.forEach((k) => { 
+                    k.addEventListener('click', () => {
+                        var option_value = k.dataset.value // This is value inside <option>.
+                        // DO STUFF;
+                        /* For instance.    */
+                        if (option_value) { 
+                            alert(option_value); // redirect
+                        }
+                        return false;
+                    });
+                });
+        });
+</script>
 </html>

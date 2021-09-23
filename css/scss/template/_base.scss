@@ -1168,6 +1168,16 @@ select {
             }
         }
     }
+    &.-contactpage { 
+        margin: $space-m 0;
+        .filter-dropdown {
+            width: 100%;
+            .custom-dropdown {
+                text-align: left;
+                padding-left: 0;
+            }
+        }
+    }
 }
 @media (min-width: $size-lg) {
     .category-filter {
@@ -1180,6 +1190,9 @@ select {
             .dropdown-item { 
                 min-width: 313px;
             }
+        }
+        &.-contactpage { 
+            margin: 0;
         }
     }
 }
