@@ -502,6 +502,14 @@ $('input[type="radio"][name="product-size"]').on('click', function(e) {
             $(value).fadeIn(300) 
         }
     });
+    // Button
+    $('.product-cta').each((idx, value) => {
+        $(value).hide();
+        var btnValue = $(value).data("button-value");
+        if( btnValue ==  e.target.value) {
+            $(value).fadeIn(300) 
+        }
+    });
 });
 
 // Unnecessary function for custom <select>;
@@ -621,3 +629,10 @@ function closeAllSelect(elmnt) {
 /* If the user clicks anywhere outside the select box,
 then close all select boxes: */
 document.addEventListener("click", closeAllSelect);
+
+
+// Toggle Radoi for size
+$(':radio[name=radio1]').change(function() {
+    $("#yes").removeClass("none");
+    $("#no").addClass("none");
+});
