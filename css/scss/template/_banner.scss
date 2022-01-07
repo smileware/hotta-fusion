@@ -727,11 +727,17 @@
                 color: white;
                 font-weight: bold;
                 font-size: 25px;
+                border: 1px solid #190C7F;
+                padding-top: 1px;
+                padding-bottom: 1px;
                 img { 
                     margin-right: 8px;
                     max-width: 16px;
                     width: 100%;
                     height: auto;
+                }
+                &:hover { 
+                    border-color: white;
                 }
             }
             .btn-shopee { 
@@ -742,11 +748,17 @@
                 color: white;
                 font-weight: bold;
                 font-size: 25px;
+                border: 1px solid #F7651F;
+                padding-top: 1px;
+                padding-bottom: 1px;
                 img { 
                     margin-right: 8px;
                     max-width: 16px;
                     width: 100%;
                     height: auto;
+                }
+                &:hover { 
+                    border-color: white;
                 }
             }
         }
