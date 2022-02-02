@@ -187,12 +187,18 @@ document
 
 /*------- Banner ------*/
 // Desktop
+var checkLength = document.querySelectorAll(".swiper-homepage .swiper-slide");
+var autoplayInstances = false;
+if(checkLength.length > 1) { 
+    autoplayInstances = {
+        delay: 6000,
+        disableOnInteraction: false
+    };
+}
+
 var homepageBanner = new Swiper( ".swiper-homepage" , {
     loop: true,
-    autoplay: {
-        delay: 6000,
-        disableOnInteraction: false,
-    },
+    autoplay: autoplayInstances,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
